@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Offerings | Somatic Sounds</title>
+  <meta name="description" content="Vibrational Sound Therapy, group sound baths, private sessions, and training in Asheville, NC, using Himalayan singing bowls to restore balance." />
+  <link rel="canonical" href="https://somaticsounds.net/offerings.html" />
+
+<!-- Favicon -->
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicons/somatic-favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicons/somatic-favicon-16x16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/images/favicons/somatic-favicon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192" href="/assets/images/favicons/somatic-favicon-192x192.png">
+<link rel="icon" type="image/png" sizes="512x512" href="/assets/images/favicons/somatic-favicon-512x512.png">
+
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Offerings | Somatic Sounds" />
+  <meta property="og:description" content="Vibrational Sound Therapy, Vibrational Sound Healing, group sound baths, private sessions, and training in Asheville NC." />
+  <meta property="og:url" content="https://somaticsounds.net/offerings.html" />
+  <meta property="og:image" content="https://somaticsounds.net/assets/images/2024/05/09-DSC06064.jpg" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Somatic Sounds" />
+  <meta property="og:image:alt" content="Sound healing therapy in Asheville" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Offerings | Somatic Sounds" />
+  <meta name="twitter:description" content="Vibrational Sound Therapy, Vibrational Sound Healing, group sound baths, private sessions, and training in Asheville NC." />
+  <meta name="twitter:image" content="https://somaticsounds.net/assets/images/2024/05/09-DSC06064.jpg" />
+
+  <!-- Schema.org: Local Business + Services -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HealthAndBeautyBusiness",
+    "@id": "https://somaticsounds.net/#business",
+    "name": "Somatic Sounds",
+    "url": "https://somaticsounds.net",
+    "image": "https://somaticsounds.net/assets/images/2024/05/09-DSC06064.jpg",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Asheville",
+      "addressRegion": "NC",
+      "addressCountry": "US"
+    },
+    "email": "somaticsoundsvst@gmail.com",
+    "priceRange": "$$",
+    "makesOffer": [
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Vibrational Sound Therapy", "description": "One-on-one therapy using seven Himalayan singing bowls placed on and around the body." } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Group Sound Bath Meditation", "description": "Weekend group sound healing meditations with 40+ Himalayan singing bowls." } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Private Sound Healing", "description": "Private sound healing sessions tailored to your intention, in studio or on location." } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Corporate Wellness & Retreats", "description": "Sound healing for teams, events, and retreats." } }
+    ]
+  }
+  </script>
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <style>
+    .offering-block {
+      padding: clamp(3rem, 6vw, 5rem) 0;
+      border-bottom: 1px solid var(--sand-dark);
+    }
+    .offering-block:last-child { border-bottom: none; }
+
+    .offering-tag {
+      display: inline-block;
+      font-size: 0.72rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      background: var(--sand-dark);
+      color: var(--bark);
+      padding: 0.3rem 0.8rem;
+      border-radius: 2px;
+      margin-bottom: 1rem;
+    }
+
+    .benefits-list {
+      list-style: none;
+      margin: 1rem 0 1.5rem;
+    }
+    .benefits-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.6rem;
+      font-size: 0.95rem;
+      color: var(--ink-muted);
+      padding: 0.3rem 0;
+    }
+    .benefits-list li::before {
+      content: '◦';
+      color: var(--stone-dark);
+      flex-shrink: 0;
+      margin-top: 0.1rem;
+    }
+
+    .session-steps {
+      background: var(--sand);
+      border-radius: var(--radius-md);
+      padding: 1.5rem 1.75rem;
+      margin: 1.5rem 0;
+    }
+    .session-steps h4 {
+      font-family: var(--font-sans);
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--stone-dark);
+      margin-bottom: 1rem;
+    }
+    .session-steps ol {
+      list-style: none;
+      counter-reset: step;
+    }
+    .session-steps ol li {
+      counter-increment: step;
+      display: flex;
+      align-items: flex-start;
+      gap: 0.75rem;
+      font-size: 0.92rem;
+      color: var(--ink-muted);
+      padding: 0.4rem 0;
+      border-bottom: 1px solid var(--sand-dark);
+    }
+    .session-steps ol li:last-child { border-bottom: none; }
+    .session-steps ol li::before {
+      content: counter(step);
+      font-family: var(--font-serif);
+      font-size: 1.1rem;
+      color: var(--stone-dark);
+      flex-shrink: 0;
+      width: 1.25rem;
+      line-height: 1.4;
+    }
+    .session-steps .concludes {
+      font-size: 0.75rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--stone-dark);
+      margin: 0.75rem 0 0.5rem;
+      display: block;
+    }
+    .session-steps .conclude-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.6rem;
+      font-size: 0.92rem;
+      color: var(--ink-muted);
+      padding: 0.3rem 0;
+    }
+    .session-steps .conclude-item::before {
+      content: '◦';
+      color: var(--stone);
+      flex-shrink: 0;
+    }
+
+    .new-badge {
+      display: inline-block;
+      font-size: 0.65rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      background: var(--bark);
+      color: var(--sand);
+      padding: 0.2rem 0.65rem;
+      border-radius: 2px;
+      margin-left: 0.6rem;
+      vertical-align: middle;
+      font-weight: 500;
+    }
+  </style>
+</head>
+<body class="page-body">
+
+  <nav class="site-nav">
+    <a href="index.html" class="nav-logo">Somatic <span>Sounds</span></a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="offerings.html" class="active">Offerings</a></li>
+      <li><a href="training.html">Training</a></li>
+      <li><a href="shop.html">Shop</a></li>
+      <li><a href="events.html">Events</a></li>
+      </ul>
+    <button class="nav-toggle" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <section class="page-hero">
+    <div class="container">
+      <span class="section-label">Choose your path</span>
+      <h1>Offerings</h1>
+      <p>Every offering is an invitation into your own well‑being, tuned to the frequency and vibration your body is ready to receive.</p>
+    </div>
+  </section>
+
+  <section class="bg-white" style="padding:0;">
+    <div class="container">
+
+      <!-- VIBRATIONAL SOUND THERAPY -->
+      <div class="offering-block">
+        <div class="grid-2" style="gap:5rem; align-items:start;">
+          <div class="fade-up">
+            <span class="offering-tag">VST · One-on-One</span>
+            <h2>Vibrational Sound Therapy</h2>
+            <div class="divider"></div>
+            <p>Vibrational Sound Therapy is a deeply grounding, body-centered experience designed to restore your natural vibratory frequencies. Seven carefully placed Himalayan Singing Bowls surround the body, each offering soothing tones and therapeutic vibrations that move through muscles, fascia, and the energetic field.</p>
+            <p class="mt-1">The sound's vibrational resonance works on a cellular level, supporting the release of built-up tension, helping regulate an overworked nervous system, and clearing energetic blockages that accumulate from stress, emotional overwhelm, and daily demands.</p>
+            <p class="mt-1">Focused on both the physical and energetic layers, this modality offers a restorative reset for anyone navigating today's pressures, fatigue, or emotional heaviness.</p>
+
+            <p style="font-size:0.78rem; font-weight:600; letter-spacing:0.1em; text-transform:uppercase; color:var(--stone-dark); margin-top:1.5rem; margin-bottom:0.1rem;">How this differs from a group sound bath</p>
+            <p class="mt-1" style="font-style:italic; color:var(--bark);">A group sound healing is a journey through sound. Vibrational Sound Therapy is therapy through vibration. Where 40-plus bowls fill a room and the sound carries you, VST places seven on and around the body, so the vibration moves directly through tissue, fluid, and bone. Each bowl is chosen for what it does to heal: grounding tones to settle the nervous system, mid-range frequencies to release held tension, brighter notes to open clarity. Worked this close, seven bowls reach places a larger ensemble simply passes over.</p>
+
+            <p style="font-size:0.78rem; font-weight:600; letter-spacing:0.1em; text-transform:uppercase; color:var(--stone-dark); margin-top:1.5rem; margin-bottom:0.1rem;;">Benefits Include</p>
+            <ul class="benefits-list" style="line-height:1.4;">
+              <li>Reduced stress, anxiety, and mental overload</li>
+              <li>Enhanced mental clarity and focus</li>
+              <li>Improved mood and emotional balance</li>
+              <li>Pain relief from physical tension or discomfort</li>
+              <li>Better quality of sleep</li>
+              <li>Nervous system regulation for those feeling overstimulated or burnt out</li>
+              <li>Release of energetic and emotional blockages</li>
+            </ul>
+
+            <div class="session-steps">
+              <h4>What to expect</h4>
+              <p style="font-size:0.88rem; font-style:italic; color:var(--bark); margin:-0.25rem 0 1rem;">Sessions run about 90 minutes, with about an hour of sound and time on either side for an opening reading, integration, and a post-session vibrational state reading to observe shifts and support grounding.</p>
+              <ol>
+                <li>A brief reading to explore your current emotional and vibrational state</li>
+                <li>Vibrational Sound Therapy using seven Himalayan bowls to support deep release and alignment</li>
+                <li>An integration and reflection period</li>
+                <li>A post-session vibrational state reading to observe shifts and support grounding</li>
+              </ol>
+            </div>
+
+            <div class="gap-actions">
+              <a href="mailto:somaticsoundsvst@gmail.com" class="btn btn-primary">Please Inquire</a>
+              <span style="font-size:0.85rem; color:var(--stone-dark); align-self:center;">somaticsoundsvst@gmail.com</span>
+            </div>
+          </div>
+          <div class="fade-up" style="animation-delay:.1s;">
+            <img src="assets/images/2025/01/1-IMG_6725.jpg" alt="Vibrational Sound Therapy session" class="img-rounded img-wide" style="aspect-ratio:3/4; object-fit:cover; width:100%;" />
+          </div>
+        </div>
+      </div>
+
+      <!-- VIBRATIONAL SOUND HEALING -->
+      <div class="offering-block">
+        <div class="grid-2" style="gap:5rem; align-items:start;">
+          <div class="img-rounded fade-up">
+            <img src="assets/images/2025/01/2-IMG_6740.jpg" alt="Vibrational Sound Healing session" style="width:100%; aspect-ratio:3/4; object-fit:cover;" />
+          </div>
+          <div class="fade-up" style="animation-delay:.1s;">
+            <span class="offering-tag">VST + Energy Healing</span>
+            <!--<h2>Vibrational Sound Healing <span class="new-badge">New</span></h2> -->
+            <h2>Vibrational Sound Healing</h2>
+            <div class="divider"></div>
+            <p>Vibrational Sound Healing builds upon Vibrational Sound Therapy (VST) by integrating the seven bowl VST modality with the <strong>Merlin Trinity Healing System (MTHS)</strong>. Similar to Reiki, MTHS is a life-force energy healing modality that uses the power of universal love and intelligent life force to raise one's vibrational frequency and support wholeness on the physical, emotional, and mental levels.</p>
+            <p class="mt-1">By combining these two modalities, the session works on multiple layers at once, clearing the energetic field, calming the nervous system, and creating a deeply restorative environment for healing and transformation.</p>
+
+            <p style="font-size:0.78rem; font-weight:600; letter-spacing:0.1em; text-transform:uppercase; color:var(--stone-dark); margin-top:1.5rem; margin-bottom:0.1rem;">Benefits Include</p>
+            <ul class="benefits-list" style="line-height:1.4;">
+              <li>Reduced stress, anxiety, and mental overload</li>
+              <li>Enhanced mental clarity and focus</li>
+              <li>Improved mood and emotional balance</li>
+              <li>Pain relief from physical tension or discomfort</li>
+              <li>Better quality of sleep</li>
+              <li>Nervous system regulation for those feeling overstimulated or burnt out</li>
+              <li>Release of energetic and emotional blockages</li>
+            </ul>
+
+            <div class="session-steps">
+              <h4>What to expect</h4>
+              <p style="font-size:0.88rem; font-style:italic; color:var(--bark); margin:-0.25rem 0 1rem;">Sessions run about 90 minutes, with about an hour of sound and energy work and time on either side for an opening reading, integration, and a post-session vibrational state reading to observe shifts and support grounding.</p>
+              <ol>
+                <li>A brief reading to explore your current emotional and vibrational state</li>
+                <li>MTHS energy work to clear, balance, and open the energetic pathways</li>
+                <li>Vibrational Sound Therapy using seven Himalayan bowls to support deep release and alignment</li>
+                <li>An integration and reflection period</li>
+                <li>A post-session vibrational state reading to observe shifts and support grounding</li>
+              </ol>
+            </div>
+
+            <div class="gap-actions">
+              <a href="mailto:somaticsoundsvst@gmail.com" class="btn btn-primary">Please Inquire</a>
+              <span style="font-size:0.85rem; color:var(--stone-dark); align-self:center;">somaticsoundsvst@gmail.com</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- PRIVATE SOUND HEALING -->
+      <div class="offering-block">
+        <div class="grid-2" style="gap:5rem; align-items:start;">
+          <div class="img-rounded fade-up">
+            <img src="assets/images/2025/01/1-IMG_2054.jpg" alt="Private sound healing session" style="width:100%; aspect-ratio:3/4; object-fit:cover;" />
+          </div>
+          <div class="fade-up" style="animation-delay:.1s;">
+            <span class="offering-tag">Private Sessions</span>
+            <h2>Private Sound Healing</h2>
+            <div class="divider"></div>
+            <p>Schedule a private sound healing journey, a session held just for you, tuned to where you are and what you need. Join Vivek at his studio in Asheville, or have him travel to you for an experience in the comfort of your own space.</p>
+            <p class="mt-1">Each private session is shaped around your intention. Over 40 handcrafted Himalayan singing bowls create a layered soundscape that reaches the physical, emotional, mental, and spiritual layers all at once. Without the energy of a group, the experience can settle deeper and feel more personal.</p>
+            <p class="mt-1">This somatic experience is centered around the body's chakra energy points. Bowls are played directly over the body, with focused attention given to where you most need support. As the resonating tones move through you, expect a gentle transformation, a felt sense of harmony, balance, and alignment settling in.</p>
+
+            <p style="font-size:0.78rem; font-weight:600; letter-spacing:0.1em; text-transform:uppercase; color:var(--stone-dark); margin-top:1.5rem; margin-bottom:0.1rem;">Ideal For</p>
+            <ul class="benefits-list" style="line-height:1.4;">
+              <li>Personal reset during seasons of stress or transition</li>
+              <li>Support alongside therapy, recovery, or other healing work</li>
+              <li>Deeper work than a group setting allows</li>
+              <li>Those new to sound healing wanting a private first experience</li>
+              <li>Birthdays, anniversaries, or meaningful gifts</li>
+              <li>Bringing the experience to your own home or sacred space</li>
+            </ul>
+
+            <div class="session-steps">
+              <h4>What to expect</h4>
+              <p style="font-size:0.88rem; font-style:italic; color:var(--bark); margin:-0.25rem 0 1rem;">Sessions run about 90 minutes, with about an hour of sound and time on either side for an intention-setting check-in, integration, and space to reflect before stepping back into your day.</p>
+              <ol>
+                <li>A short check-in to set intention and understand what you're bringing in</li>
+                <li>A guided settling, finding stillness on the mat with blankets and support</li>
+                <li>A sound journey using over 40 Himalayan bowls, sometimes played around and above the body</li>
+                <li>A quiet integration period to come back gently</li>
+                <li>Space to share, reflect, or simply rest before stepping back into your day</li>
+              </ol>
+            </div>
+
+            <div class="gap-actions">
+              <a href="mailto:somaticsoundsvst@gmail.com" class="btn btn-primary">Please Inquire</a>
+              <span style="font-size:0.85rem; color:var(--stone-dark); align-self:center;">somaticsoundsvst@gmail.com</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- GROUP SOUND HEALING -->
+      <div class="offering-block">
+        <div class="grid-2" style="gap:5rem; align-items:start;">
+          <div class="fade-up">
+            <span class="offering-tag">Event Sessions</span>
+            <h2>Group Sound Healing Meditation</h2>
+            <div class="divider"></div>
+            <p>Let go. Let sound do the rest. Soothing Himalayan tones wash over you, quieting the mind, softening the body, settling the spirit. Over 40 handcrafted singing bowls, layered with binaural beats, open a soundscape your body can settle into. Harmonious, grounding frequencies reach your physical, emotional, mental, and spiritual layers all at once. More textured than a traditional sound bath. An intimate setting.</p>
+            <div class="gap-actions mt-2">
+              <a href="events.html" class="btn btn-primary">View Schedule & Book</a>
+            </div>
+          </div>
+          <div class="img-rounded fade-up" style="animation-delay:.1s;">
+            <img src="assets/images/2024/05/09-DSC06064.jpg" alt="Group sound healing session" class="img-wide" style="width:100%; aspect-ratio:4/3; object-fit:cover;" />
+          </div>
+        </div>
+      </div>
+
+      <!-- TEMPLE OF THE AWAKENING HEART -->
+      <div class="offering-block">
+        <div class="grid-2" style="gap:5rem; align-items:center;">
+          <div class="fade-up">
+            <span class="offering-tag">Sacred Location</span>
+            <h2>Temple of the Awakening Heart</h2>
+            <div class="divider"></div>
+            <p>Schedule a private sound healing at the "Temple of the Awakening Heart," located only 30 minutes from Asheville on 40 acres of precious sacred Cherokee Medicine Land in the Blue Ridge Mountains.</p>
+            <div class="gap-actions mt-3">
+              <a href="mailto:somaticsoundsvst@gmail.com" class="btn btn-outline">Please Inquire</a>
+            </div>
+          </div>
+          <div class="img-rounded fade-up" style="animation-delay:.1s;">
+            <img src="assets/images/2025/03/1-IMG_2271-225x300.jpg" alt="Temple of the Awakening Heart on sacred Cherokee Medicine Land in the Blue Ridge Mountains" style="width:100%; aspect-ratio:3/4; object-fit:cover;" />
+          </div>
+        </div>
+      </div>
+
+      <!-- COMMUNITY + TRAINING -->
+      <div class="offering-block">
+        <div class="grid-2" style="gap:5rem; align-items:start;">
+          <div class="fade-up">
+            <span class="offering-tag">Community</span>
+            <h2>Community Events</h2>
+            <div class="divider"></div>
+            <p>"Sit &amp; Sound." Third Wednesdays of every month where we bring guided meditation and sound as a reset to your week. Through Meetup. Open to all.</p>
+            <div class="gap-actions mt-3">
+              <a href="https://www.meetup.com/inner-peace-collective/" class="btn btn-outline">Community Events</a>
+            </div>
+          </div>
+          <div class="fade-up" style="animation-delay:.1s;">
+            <span class="offering-tag">Certification Course</span>
+            <h2>Sound Healing Training</h2>
+            <div class="divider"></div>
+            <p style="font-style:italic; color:var(--stone-dark); margin-bottom:0.75rem;">Sound with Intention &amp; Purpose · 3-Day In-Person Course</p>
+            <p>Step into the transformative world of sound and vibration in this three-day, in-person training designed to give you the knowledge, confidence, and hands-on experience to begin your journey as a sound healing practitioner.</p>
+            <div class="gap-actions mt-3">
+              <a href="training.html" class="btn btn-outline">Learn More</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CORPORATE -->
+      <div class="offering-block">
+        <div class="fade-up">
+          <span class="offering-tag">Custom</span>
+          <h2>Corporate Wellness, Private Events, Workshops &amp; Retreats</h2>
+          <div class="divider"></div>
+          <p>Bring the healing power of sound to your team, your event, or your retreat.</p>
+          <div class="gap-actions mt-3">
+            <a href="mailto:somaticsoundsvst@gmail.com" class="btn btn-outline">Contact</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CONTACT BOTTOM -->
+  <section class="band">
+    <div class="container center fade-up">
+      <span class="section-label" style="color:var(--stone)"></span>
+      <h2>Experience the difference in sound healing therapy</h2>
+      <div class="divider center" style="background:var(--stone)"></div>
+      <p style="color:var(--sand-dark); margin:0 auto 2.5rem;">The premise is that sound can influence physical, emotional, mental and spiritual state of being. Our body is made up of 70% water. Because of this, sound vibrations and frequencies resonate with our body to produce relaxation and healing.</p>
+      <div class="gap-actions" style="justify-content:center">
+        <a href="events.html" class="btn btn-light">Book a Session</a>
+        <a href="mailto:somaticsoundsvst@gmail.com" class="btn btn-outline" style="color:var(--sand); border-color:var(--stone)">Get in Touch</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+				<div class="footer-brand">
+				  <a href="index.html" class="nav-logo">Somatic <span>Sounds</span></a>
+				  <p>Sound healing in Asheville, NC. Blending ancient wisdom with modern well-being through Himalayan singing bowls.</p>
+				  <div class="social-links">
+					<a href="https://www.instagram.com/somatic_sounds_vst/" aria-label="Instagram" target="_blank" rel="noopener">
+					  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+						<rect x="3" y="3" width="18" height="18" rx="5" ry="5"/>
+						<path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+						<line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+					  </svg>
+					</a>
+					<a href="https://www.facebook.com/profile.php?id=61555731204932&sk=about" aria-label="Facebook" target="_blank" rel="noopener">
+					  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+						<path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+					  </svg>
+					</a>
+					<a href="https://www.threads.net/@somatic_sounds_vst" aria-label="Threads" target="_blank" rel="noopener">
+					  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+						<path d="M12.186 24h-.007c-3.581-.024-6.334-1.205-8.184-3.509C2.35 18.44 1.5 15.586 1.472 12.01v-.017c.03-3.579.879-6.43 2.525-8.482C5.845 1.205 8.6.024 12.18 0h.014c2.746.02 5.043.725 6.826 2.098 1.677 1.29 2.858 3.13 3.509 5.467l-2.04.569c-1.104-3.96-3.898-5.984-8.304-6.015-2.91.022-5.11.936-6.54 2.717C4.307 6.504 3.616 8.914 3.589 12c.027 3.086.718 5.496 2.057 7.164 1.43 1.78 3.631 2.695 6.54 2.717 2.623-.02 4.358-.631 5.8-2.045 1.647-1.613 1.618-3.593 1.09-4.798-.31-.71-.873-1.3-1.634-1.75-.192 1.352-.622 2.446-1.284 3.272-.886 1.102-2.14 1.704-3.73 1.79-1.202.065-2.361-.218-3.259-.801-1.063-.689-1.685-1.74-1.752-2.964-.065-1.19.408-2.285 1.33-3.082.88-.76 2.119-1.207 3.583-1.291a13.853 13.853 0 0 1 3.02.142c-.126-.742-.375-1.332-.75-1.757-.513-.586-1.308-.883-2.359-.89h-.029c-.844 0-1.992.232-2.721 1.32L7.734 7.847c.98-1.454 2.568-2.256 4.478-2.256h.044c3.194.02 5.097 1.975 5.287 5.388.108.046.216.094.321.142 1.49.7 2.58 1.761 3.154 3.07.797 1.82.871 4.79-1.548 7.158-1.85 1.81-4.094 2.628-7.277 2.65Zm1.003-11.69c-.242 0-.487.007-.739.021-1.836.103-2.98.946-2.916 2.143.067 1.256 1.452 1.839 2.784 1.767 1.224-.065 2.818-.543 3.086-3.71a10.5 10.5 0 0 0-2.215-.221z"/>
+					  </svg>
+					</a>
+					<a href="https://maps.app.goo.gl/hyhvpstZaKZkkean6" aria-label="Google" target="_blank" rel="noopener">
+					  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+						<path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
+						<path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.99.66-2.26 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
+						<path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/>
+						<path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/>
+					  </svg>
+					</a>
+					<a href="mailto:somaticsoundsvst@gmail.com" aria-label="Email">
+					  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+						<path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+						<polyline points="22,6 12,13 2,6"/>
+					  </svg>
+					</a>
+				  </div>
+				</div>
+        <div class="footer-col">
+          <h4>Offerings</h4>
+          <ul>
+            <li><a href="events.html">Group Sound Baths</a></li>
+            <li><a href="offerings.html">Vibrational Therapy</a></li>
+            <li><a href="offerings.html">Private Sessions</a></li>
+            <li><a href="offerings.html">Corporate & Events</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Learn</h4>
+          <ul>
+            <li><a href="training.html">Training Certification</a></li>
+            <li><a href="about.html">About Vivek</a></li>
+            <li><a href="shop.html">Singing Bowls</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Connect</h4>
+          <ul>
+            <li><a href="events.html">Book a Session</a></li>
+            <li><a href="events.html#faq">FAQ</a></li>
+            <li><a href="mailto:somaticsoundsvst@gmail.com">Email Us</a></li>
+            <li><a href="https://maps.app.goo.gl/hyhvpstZaKZkkean6">Call</a></li>
+            <li><a href="energy.html">Energy</a></li>
+            <li><a href="liability.html">Waiver & Terms</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 Somatic Sounds</span>
+        <span>Sound with Intention and Purpose</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

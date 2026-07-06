@@ -1,0 +1,1066 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Events & Booking | Somatic Sounds</title>
+  <meta name="description" content="Book a sound bath in Asheville, NC. Group sessions Saturday at 11am & 3pm, Sunday at 11am & 6pm with Himalayan singing bowls. Just 7 spots per session." />
+  <link rel="canonical" href="https://somaticsounds.net/events.html" />
+
+<!-- Favicon -->
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicons/somatic-favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicons/somatic-favicon-16x16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/images/favicons/somatic-favicon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192" href="/assets/images/favicons/somatic-favicon-192x192.png">
+<link rel="icon" type="image/png" sizes="512x512" href="/assets/images/favicons/somatic-favicon-512x512.png">
+
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Events & Booking | Somatic Sounds" />
+  <meta property="og:description" content="Book a sound bath session with Himalayan singing bowls in Asheville, NC. Saturday at 11am & 3pm, Sunday at 11am & 6pm. 7 people max." />
+  <meta property="og:url" content="https://somaticsounds.net/events.html" />
+  <meta property="og:image" content="https://somaticsounds.net/assets/images/2024/05/09-DSC06064.jpg" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Somatic Sounds" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Events & Booking | Somatic Sounds" />
+  <meta name="twitter:description" content="Book a sound bath session with Somatic Sounds in Asheville, NC. Saturday at 11am & 3pm, Sunday at 11am & 6pm. 7 people max." />
+  <meta name="twitter:image" content="https://somaticsounds.net/assets/images/2024/05/09-DSC06064.jpg" />
+  <!-- Schema.org: Local Business -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HealthAndBeautyBusiness",
+    "@id": "https://somaticsounds.net/#business",
+    "name": "Somatic Sounds",
+    "url": "https://somaticsounds.net",
+    "image": "https://somaticsounds.net/assets/images/2024/04/1-22-IMG_5878-scaled.jpg",
+    "description": "Vibrational sound healing in Asheville, NC. Group sound bath meditations and private sessions using Himalayan singing bowls.",
+    "founder": { "@type": "Person", "name": "Vivek Chugh" },
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Asheville",
+      "addressRegion": "NC",
+      "addressCountry": "US"
+    },
+    "email": "somaticsoundsvst@gmail.com",
+    "priceRange": "$$",
+    "sameAs": [
+      "https://www.instagram.com/somatic_sounds_vst/",
+      "https://www.facebook.com/profile.php?id=61555731204932",
+      "https://www.threads.net/@somatic_sounds_vst"
+    ]
+  }
+  </script>
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <style>
+    .booking-cta {
+      background: var(--sand);
+      border: 1px solid var(--sand-dark);
+      border-radius: var(--radius-lg);
+      padding: 2.5rem;
+      text-align: center;
+    }
+    .booking-cta h3 { margin-bottom: 0.75rem; }
+    .booking-cta p { margin: 0 auto 1.5rem; }
+
+    .booking-image-link {
+      display: block;
+      margin-top: 1.5rem;
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      transition: opacity var(--transition), transform var(--transition);
+    }
+    .booking-image-link:hover {
+      opacity: 0.92;
+      transform: translateY(-2px);
+    }
+    .booking-image-link img {
+      display: block;
+      width: 100%;
+    }
+
+    .schedule-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      margin-bottom: 1.25rem;
+    }
+    @media (max-width: 600px) { .schedule-row { grid-template-columns: 1fr; } }
+
+    .schedule-day {
+      margin-bottom: 1.5rem;
+    }
+    .schedule-day:last-child { margin-bottom: 0; }
+    .schedule-day-label {
+      font-family: var(--font-serif);
+      font-size: 1rem;
+      color: var(--stone-dark);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 0.6rem;
+      display: block;
+    }
+
+    .schedule-cell {
+      background: var(--white);
+      border: 1px solid var(--sand-dark);
+      border-radius: var(--radius-md);
+      padding: 1.25rem;
+      text-align: center;
+    }
+    .schedule-cell .time-big {
+      font-family: var(--font-serif);
+      font-size: 2rem;
+      color: var(--bark);
+      display: block;
+      line-height: 1;
+      margin-bottom: 0.25rem;
+    }
+
+    .what-to-expect li {
+      display: flex;
+      gap: 1rem;
+      padding: 1rem 0;
+      border-bottom: 1px solid var(--sand-dark);
+      align-items: flex-start;
+    }
+    .what-to-expect li:last-child { border-bottom: none; }
+    .expect-num {
+      font-family: var(--font-serif);
+      font-size: 1.4rem;
+      color: var(--stone);
+      flex-shrink: 0;
+      width: 1.5rem;
+      line-height: 1.2;
+    }
+
+    /* ---- REVIEWS ---- */
+    .reviews-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+      margin-top: 3rem;
+    }
+    @media (max-width: 900px) { .reviews-grid { grid-template-columns: 1fr 1fr; } }
+    @media (max-width: 560px)  { .reviews-grid { grid-template-columns: 1fr; } }
+
+    .review-card {
+      background: var(--white);
+      border: 1px solid var(--sand-dark);
+      border-radius: var(--radius-md);
+      padding: 1.75rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      transition: box-shadow var(--transition);
+    }
+    .review-card:hover { box-shadow: 0 6px 24px rgba(58,46,34,.08); }
+
+    .review-stars {
+      color: var(--stone-dark);
+      font-size: 0.9rem;
+      letter-spacing: 0.1em;
+    }
+
+    .review-text {
+      font-family: var(--font-serif);
+      font-size: 1rem;
+      font-style: italic;
+      color: var(--bark);
+      line-height: 1.65;
+      flex: 1;
+    }
+
+    .review-text::before { content: '\201C'; }
+    .review-text::after  { content: '\201D'; }
+
+    .review-meta {
+      font-size: 0.78rem;
+      letter-spacing: 0.06em;
+      color: var(--stone-dark);
+      text-transform: uppercase;
+      border-top: 1px solid var(--sand-dark);
+      padding-top: 0.75rem;
+    }
+
+    /* hidden reviews shown by JS */
+    .review-card.hidden-review { display: none; }
+    .review-card.hidden-review.revealed { display: flex; }
+
+    #show-more-btn {
+      margin-top: 2.5rem;
+    }
+
+    /* ---- FAQ ---- */
+    #faq {
+      scroll-margin-top: 90px;
+    }
+    .faq-group {
+      margin-top: 3rem;
+    }
+    .faq-group-label {
+      width: 100%;
+      background: transparent;
+      border: none;
+      border-bottom: 1px solid rgba(58, 46, 34, 0.22);
+      cursor: pointer;
+      font-family: var(--font-serif);
+      font-size: 0.85rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--stone-dark);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 1rem;
+      padding: 0 0 0.5rem;
+      text-align: left;
+      transition: color var(--transition);
+    }
+    .faq-group-label:hover { color: var(--bark); }
+    .faq-group-toggle {
+      flex-shrink: 0;
+      width: 1.1rem;
+      height: 1.1rem;
+      position: relative;
+    }
+    .faq-group-toggle::before,
+    .faq-group-toggle::after {
+      content: '';
+      position: absolute;
+      background: var(--stone-dark);
+      top: 50%;
+      left: 50%;
+      transition: transform var(--transition);
+    }
+    .faq-group-toggle::before {
+      width: 0.8rem; height: 1px;
+      transform: translate(-50%, -50%);
+    }
+    .faq-group-toggle::after {
+      width: 1px; height: 0.8rem;
+      transform: translate(-50%, -50%);
+    }
+    .faq-group.open .faq-group-toggle::after {
+      transform: translate(-50%, -50%) scaleY(0);
+    }
+    .faq-group-body {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height var(--transition);
+    }
+    .faq-group.open .faq-group-body {
+      max-height: 4000px;
+    }
+    .faq-item {
+      border-bottom: 1px solid rgba(58, 46, 34, 0.22);
+    }
+    .faq-item:first-of-type {
+      border-top: 1px solid rgba(58, 46, 34, 0.22);
+    }
+    .faq-question {
+      width: 100%;
+      background: transparent;
+      border: none;
+      padding: 1.25rem 0;
+      text-align: left;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1.5rem;
+      font-family: var(--font-serif);
+      font-size: 1.15rem;
+      color: var(--bark);
+      line-height: 1.4;
+      transition: color var(--transition);
+    }
+    .faq-question:hover { color: var(--stone-dark); }
+    .faq-toggle {
+      flex-shrink: 0;
+      width: 1.5rem;
+      height: 1.5rem;
+      position: relative;
+      transition: transform var(--transition);
+    }
+    .faq-toggle::before,
+    .faq-toggle::after {
+      content: '';
+      position: absolute;
+      background: var(--stone-dark);
+      top: 50%;
+      left: 50%;
+      transition: transform var(--transition);
+    }
+    .faq-toggle::before {
+      width: 1rem; height: 1px;
+      transform: translate(-50%, -50%);
+    }
+    .faq-toggle::after {
+      width: 1px; height: 1rem;
+      transform: translate(-50%, -50%);
+    }
+    .faq-item.open .faq-toggle::after {
+      transform: translate(-50%, -50%) scaleY(0);
+    }
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height var(--transition);
+    }
+    .faq-answer-inner {
+      padding: 0 0 1.5rem;
+      color: var(--bark);
+      font-size: 1rem;
+      line-height: 1.7;
+    }
+    .faq-answer-inner p { margin-bottom: 0.85rem; }
+    .faq-answer-inner p:last-child { margin-bottom: 0; }
+    .faq-answer-inner a { color: var(--bark); border-bottom: 1px solid var(--sand-dark); }
+    .faq-answer-inner ul {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 0.85rem;
+    }
+    .faq-answer-inner ul li {
+      position: relative;
+      padding: 0.3rem 0 0.3rem 1.4rem;
+      line-height: 1.6;
+    }
+    .faq-answer-inner ul li::before {
+      content: '';
+      position: absolute;
+      left: 0.15rem;
+      top: 0.95rem;
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background: var(--stone-dark);
+    }
+    .faq-item.open .faq-answer {
+      max-height: 1500px;
+    }
+  </style>
+</head>
+<body class="page-body">
+
+  <nav class="site-nav">
+    <a href="index.html" class="nav-logo">Somatic <span>Sounds</span></a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="offerings.html">Offerings</a></li>
+      <li><a href="training.html">Training</a></li>
+      <li><a href="shop.html">Shop</a></li>
+      <li><a href="events.html" class="active">Events</a></li>
+      </ul>
+    <button class="nav-toggle" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <section class="page-hero">
+    <div class="container">
+      <span class="section-label">Asheville, NC</span>
+      <h1>Events</h1>
+      <p>Weekly sound healing, sound bath meditations, and community events.<br>Intimate space setting.</p>
+    </div>
+  </section>
+
+  <!-- WEEKEND SESSIONS -->
+  <section class="bg-white">
+    <div class="container">
+      <div class="grid-2" style="gap:5rem; align-items:start;">
+        <div class="fade-up">
+          <span class="section-label">Every Weekend</span>
+          <h2>Sound Healing Meditations</h2>
+          <div class="divider"></div>
+          <p>A somatic journey where ancient wisdom meets modern well-being. Soothing Himalayan tones wash over you — quieting the mind, softening the body, settling the spirit.</p>
+          <p>Vivek guides each session with <strong>over 40 handcrafted singing bowls</strong>, layered with <strong>binaural beats</strong> to support deep relaxation and nervous system regulation. It's a multidimensional soundscape — richer and more textured than a traditional sound bath.</p>
+          <p>No experience needed. Come as you are — curious, tired, seeking, or just ready for a reset.</p>
+          <div style="margin-top: 2rem;">
+            <p class="small muted mb-1">Session Times</p> <p class="muted" style="margin-top:0.5rem; font-size:0.75rem;">*Check online schedule for any changes.</p>
+
+            <div class="schedule-day">
+              <span class="schedule-day-label">Saturday</span>
+              <div class="schedule-row">
+                <a href="https://somaticsounds.as.me/" target="_blank" rel="noopener" class="schedule-cell">
+                  <span class="time-big">11 am</span>
+                </a>
+                <a href="https://somaticsounds.as.me/" target="_blank" rel="noopener" class="schedule-cell">
+                  <span class="time-big">3 pm</span>
+                </a>
+              </div>
+            </div>
+
+            <div class="schedule-day">
+              <span class="schedule-day-label">Sunday</span>
+              <div class="schedule-row">
+                <a href="https://somaticsounds.as.me/" target="_blank" rel="noopener" class="schedule-cell">
+                  <span class="time-big">11 am</span>
+                </a>
+                <a href="https://somaticsounds.as.me/" target="_blank" rel="noopener" class="schedule-cell">
+                  <span class="time-big">6 pm</span>
+                </a>
+              </div>
+            </div>
+
+            <p class="small muted">Intimate space setting</p>
+          </div>
+        </div>
+
+        <div class="fade-up" style="animation-delay:0.15s">
+          <div class="booking-cta">
+            <h3>Reserve your spot</h3>
+            <p>Sessions are booked through Acuity Scheduling. Select your quantity, preferred date and time — and you're set.</p>
+            <a href="https://somaticsounds.as.me/schedule/f25d1001" target="_blank" rel="noopener" class="btn btn-primary">Book Online</a>
+            <p style="font-size:0.85rem; margin-top:1.25rem; color:var(--stone-dark); line-height:1.6;">Sessions are non-refundable. Any unused ticket is allocated to our scholarship program to support those who need it.</p>
+            <p style="font-size:0.85rem; margin-top:0.75rem; color:var(--stone-dark)">Questions? Email <a href="mailto:somaticsoundsvst@gmail.com" style="color:var(--bark)">somaticsoundsvst@gmail.com</a></p>
+          </div>
+
+          <a href="https://somaticsounds.as.me/schedule/f25d1001" target="_blank" rel="noopener" class="booking-image-link" aria-label="Book a sound healing session">
+            <img src="assets/images/bowls/weaver1.jpg" alt="Sound bath session setup" class="img-rounded img-wide" />
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHAT TO EXPECT -->
+  <section class="bg-sand">
+    <div class="container">
+      <div class="grid-2" style="gap:5rem; align-items:start;">
+        <div class="fade-up">
+          <span class="section-label">Your First Visit</span>
+          <h2>What to expect</h2>
+          <div class="divider"></div>
+          <ul class="what-to-expect" style="list-style:none; padding:0;">
+            <li>
+              <span class="expect-num">1</span>
+              <div>
+                <h4>Arrive 10-15min early</h4>
+                <p>Give yourself time to settle in, remove shoes, and find your mat. The space is calm and welcoming.</p>
+              </div>
+            </li>
+            <li>
+              <span class="expect-num">2</span>
+              <div>
+                <h4>Lie down and let go</h4>
+                <p>You'll spend most of the session lying comfortably on a yoga mat. Blankets and eye cover are provided.<br> ( Chair option available )</p>
+              </div>
+            </li>
+            <li>
+              <span class="expect-num">3</span>
+              <div>
+                <h4>Let the sound do the work</h4>
+                <p>Each soundscape unfolds over 45–50 minutes. There's nothing for you to do — just receive.</p>
+              </div>
+            </li>
+            <li>
+              <span class="expect-num">4</span>
+              <div>
+                <h4>Come back slowly</h4>
+                <p>After the session, take your time returning. Many people feel deeply relaxed — almost dreamlike. That's normal.</p>
+              </div>
+            </li>
+            <li>
+              <span class="expect-num">5</span>
+              <div>
+                <h4>Notice what unfolds</h4>
+                <p>The session continues after you leave. Calm, clarity, or a quiet shift may surface hours or days later.</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="fade-up" style="animation-delay:0.15s">
+          <img src="assets/images/bowls/mixbowldark2.jpg" alt="Himalayan singing bowls close up" class="img-rounded img-tall" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHAT TO BRING -->
+  <section class="bg-white">
+    <div class="container">
+      <div class="section-header center fade-up" style="max-width:600px; margin:0 auto;">
+        <span class="section-label">Prepare</span>
+        <h2>What to bring</h2>
+        <div class="divider center"></div>
+      </div>
+      <div class="grid-2 mt-2">
+        <div class="card fade-up center">
+          <div style="font-size:1.5rem; margin-bottom:0.75rem; color:var(--stone-dark)">○</div>
+          <h4>Comfortable clothes</h4>
+          <p>Loose, warm layers. You'll be lying still, so comfort is key.</p>
+        </div>
+        <div class="card fade-up center" style="animation-delay:0.08s">
+          <div style="font-size:1.5rem; margin-bottom:0.75rem; color:var(--stone-dark)">○</div>
+          <h4>An open mind</h4>
+          <p>No experience needed.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SIT & SOUND -->
+  <section class="bg-sand">
+    <div class="container">
+      <div class="grid-2" style="align-items:center; gap:4rem;">
+        <div class="fade-up">
+          <span class="section-label">Community Event</span>
+          <h2>Sit & Sound</h2>
+          <div class="divider"></div>
+          <p>A free monthly gathering held on the third Wednesday of every month. Guided meditation and live sound healing — open to everyone in the community.</p>
+          <p class="mt-2">Co-facilitated by Vivek and Omri. Hosted via Meetup. A simple, accessible reset to your week.</p>
+          <a href="https://www.meetup.com/inner-peace-collective/" target="_blank" rel="noopener" class="btn btn-outline mt-1">View on Meetup</a>
+        </div>
+        <div class="fade-up" style="animation-delay:0.15s">
+          <img src="assets/images/2024/07/11-DSC06500-768x323.jpg" alt="Community meditation gathering" class="img-rounded img-wide" />
+        </div>
+      </div>
+     </div>
+   </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="bg-sand">
+    <div class="container">
+      <div class="section-header center fade-up" style="max-width:640px; margin:0 auto;">
+        <span class="section-label"></span>
+        <h2>Testimonials</h2>
+        <div class="divider center"></div>
+        <p></p>
+      </div>
+
+      <div class="reviews-grid">
+
+        <!-- TOP 6 VISIBLE: highest-impact testimonials with specific outcomes & transformation -->
+
+        <div class="review-card fade-up">
+          <p class="review-text">Vivek performed an hour long session. I relaxed and my husband, who has Parkinson's Disease, experienced total relief from tremors for 2–3 hours. That doesn't sound like much but it's amazing that vibrations and sound can have that effect. My husband wants to visit Vivek again!</p>
+        </div>
+
+        <div class="review-card fade-up" style="animation-delay:.06s;">
+          <p class="review-text">I have been attending Vivek's sound baths fairly consistently for the last 3 months. These sessions have decreased some of my anxieties significantly. I have also noticed a marked decrease in pain from a very old injury. I would recommend visiting Somatic Sounds to anyone in search of emotional or physical healing.</p>
+        </div>
+
+        <div class="review-card fade-up" style="animation-delay:.12s;">
+          <p class="review-text">The Group Sound Healings are wonderful. Vivek skillfully customized his services and bowl placement which facilitated a deeper experience. The vibrations penetrated to my core inducing a profound out of body experience. I emerged feeling like I had a physical upgrade, greater mental clarity, and joyfulness.</p>
+        </div>
+
+        <div class="review-card fade-up">
+          <p class="review-text">We absolutely loved our sound bath journey. Our Facilitator, Vivek used about 30 handcrafted singing bowls and lulled both of us into a deep theta brain state. I even fell asleep and felt rejuvenated after, with some of the best sleep that night. What a beautiful hour of symphonic relaxation.</p>
+        </div>
+
+        <div class="review-card fade-up" style="animation-delay:.06s;">
+          <p class="review-text">Vivek's intuitive ability to empower you to help you find what you need within is shown again and again in each session. This is not a passive listening experience. It transcends the moment and takes you exactly where you need to go to find what you need within yourself.</p>
+        </div>
+
+        <div class="review-card fade-up" style="animation-delay:.12s;">
+          <p class="review-text">A profound, transformative experience. Vivek's skill and intuition created an intensely powerful sound healing session, both physically and spiritually. If you're seeking deep relaxation, inner connection, or energetic healing, I highly recommend booking a session. I'll definitely be back!</p>
+        </div>
+
+        <!-- hidden reviews, revealed by "Show more" -->
+
+        <div class="review-card fade-up">
+          <p class="review-text">Vivek is a healer inside and out! His sessions will change your life, your vibration, your energy and more. So thankful to have discovered his offering, which has simply put me on a more beautiful path of wellbeing!</p>
+        </div>
+
+        <div class="review-card fade-up" style="animation-delay:.06s;">
+          <p class="review-text">I've been attending regular sound baths and they've made a huge difference in my anxiety levels. I feel calmer, more grounded, and better able to handle everyday stress. It's become an essential part of my wellness routine.</p>
+        </div>
+
+        <div class="review-card fade-up" style="animation-delay:.12s;">
+          <p class="review-text">Vivek creates a sanctuary space of sound. I went into the session feeling some emotional weight, and left lifted and lightened. I felt a significant shift after bathing in a pool of soothing sacred tones. I highly recommend booking sound healing sessions with Vivek.</p>
+        </div>
+
+        <div class="review-card hidden-review">
+          <p class="review-text">Vivek's playing is a next level experience — like seeing colors with sound and even feeling as if you are levitating! Vivek is also such a personal, fun, and super knowledgeable guy to chat with. Highly recommend. I'll be returning when I'm back in town!</p>
+        </div>
+
+        <div class="review-card hidden-review">
+          <p class="review-text">I booked a private sound bath for me and my friend and it was an extraordinary experience. Vivek created a custom selection of healing bowls and even played them directly over the body. You can tell he is passionate about what he does and has built a great collection of bowls from all over the world.</p>
+        </div>
+
+        <div class="review-card hidden-review">
+          <p class="review-text">I've attended Vivek's sound baths for a couple months now and they are deeply experiential, soothing, meditative, and even transformative. He is friendly, thoughtful, and wants you to have a great experience every time. Vivek isn't just about tones and vibrations — he is about creating sound journeys that heal.</p>
+        </div>
+
+        <div class="review-card hidden-review">
+          <p class="review-text">An unforgettable experience! We were all reflecting today on how deeply impactful it was. Thank you so much for holding such a powerful space. We're already looking forward to your return!</p>
+        </div>
+
+        <div class="review-card hidden-review">
+          <p class="review-text">It was my first time having a soundbath with Vivek. Very unique and powerful experience — the whole setup is relaxing and enhances the sound session. I reached deep relaxation and dreamlike states that I've only experienced through very different means. Impressive.</p>
+        </div>
+
+        <div class="review-card hidden-review">
+          <p class="review-text">Vivek's somatic sound sessions are relaxing, rejuvenating and transformative! He weaves together the beautiful sounds of Tibetan singing bowls, gong, and other instruments to help you transcend your physical body and enter into vibrational alignment.</p>
+        </div>
+
+        <div class="review-card hidden-review">
+          <p class="review-text">The session was very powerful and healing. I felt a beautiful energetic shift and was able to move a lot of stagnant energy. Vivek's energy is so calm and he is extremely professional. I really felt at ease and look forward to another session soon.</p>
+        </div>
+
+        <div class="review-card hidden-review">
+          <p class="review-text">I have recently been introduced to sound healing this past year. I got into it after listening to studies on the effects of vibrations and frequencies through the body. If you haven't tried it you need to do it with Vivek. He is really skilled at what he does and I've had noticeable results.</p>
+        </div>
+
+        <div class="review-card hidden-review">
+          <p class="review-text">Vivek is incredibly intuitive and down to earth. I felt at ease from the moment we met. My experiences in his sound baths have been healing, grounding and super uplifting to the spirit. I'm so happy to have crossed paths and would absolutely recommend a visit to Somatic Sounds!</p>
+        </div>
+
+        <div class="review-card hidden-review">
+          <p class="review-text">So I've been to at least half a dozen of these and I can honestly say, they're addictive. Every time, it's a different experience. Sometimes he walks around the room with the bowls, playing directly over you — which is really neat.</p>
+        </div>
+
+        <div class="review-card hidden-review">
+          <p class="review-text">Vivek is professional and such a gentle and compassionate practitioner and person. His bowls, gong, and chimes ripple through my mind, body, spirit gently and moves energy that is stuck. I will definitely be returning more frequently. I highly recommend experiencing sound healings the way he does it.</p>
+        </div>
+
+        <div class="review-card hidden-review">
+          <p class="review-text">I attended a sound bath by Vivek this weekend and wow, it was amazing! I felt so calm, centered and grounded. He took me to another dimension! A wonderful experience that you won't find anywhere else in Asheville. I highly recommend.</p>
+        </div>
+
+        <div class="review-card hidden-review">
+          <p class="review-text">I have experienced different kinds of sound healings over the years, and I love the Tibetan singing bowls that Vivek facilitates sessions with. I felt so relaxed, grounded, and a bit blissed from the experience. His bowls, gong, and chimes move energy that is stuck. Such a healing presence!</p>
+        </div>
+
+        <div class="review-card hidden-review">
+          <p class="review-text">Vivek's take on sound bath healing is unique and powerful! I've had some experience in the past with sound baths and sound healing and it's always been with crystal bowls. And while those are beautiful, I think Tibetan bowls pack more of a "punch".</p>
+        </div>
+
+        <div class="review-card hidden-review">
+          <p class="review-text">We had a fantastic sound healing on Sunday with Vivek. He made it very relaxing and comfortable and took the time to answer questions and set our expectations. My friend was a newby and can't wait to go back! Highly recommend!</p>
+        </div>
+
+        <div class="review-card hidden-review">
+          <p class="review-text">I have done sound baths before, and this was such an intimate setting with only 4 people, allowing for a better overall experience than I have previously had. He also had many more bowls than I have seen before. So relaxing and reasonably priced. I'll definitely come back!</p>
+        </div>
+
+        <div class="review-card hidden-review">
+          <p class="review-text">Vivek's sound healing was a wonderful experience I would recommend to anyone I know. Like a guided meditation, it is both relaxing and energizing and my mind was filled with constantly shifting shapes and colors.</p>
+        </div>
+
+        <div class="review-card hidden-review">
+          <p class="review-text">This sound healing was super effective. It deeply relaxed me and helped me sleep through the night. I also feel more at ease this next day. Highly Recommend!</p>
+        </div>
+
+        <div class="review-card hidden-review">
+          <p class="review-text">Great experience with Vivek. He knows his stuff. You won't be disappointed. Excellent experience. Relaxing and easy going environment.</p>
+        </div>
+
+        <div class="review-card hidden-review">
+          <p class="review-text">I have been going regularly to Vivek's sessions since my first one last month. It's a very healing space that allows me to integrate a lot of the work that I've been doing. I'm fortunate to have found him.</p>
+        </div>
+
+        <div class="review-card hidden-review">
+          <p class="review-text">Had quite a bit of stagnant energy lingering in my legs and hips that was able to be released, and was able to mostly reset a deeply disregulated nervous system after two particularly stressful weeks where meditation had not been an option. Will return as often  as I'm able.</p>
+        </div>
+
+      </div>
+
+      <div class="center fade-up">
+        <button id="show-more-btn" class="btn btn-outline" onclick="showAllReviews()">Show All Reviews</button>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FAQ schema (mirrors the visible questions and answers below) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is sound healing?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Sound healing is a practice that uses intentional sound and vibration to support your physical, emotional, and spiritual well-being. It begins from a simple idea, that the body has a natural rhythm, and the pace of daily life, stress, tension, and depletion, can pull it out of tune. Sound healing offers a way back. In a session, you simply lie down and let the tones of Himalayan singing bowls move through you. There is nothing to do, nothing to figure out."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What are the benefits of sound healing?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "People come to sound healing for many different reasons, and its benefits are felt across body, mind, and spirit. Most often, people notice deep relaxation and relief from stress, anxiety, or low mood, better and more restful sleep, easing of physical pain and tension held in the body, emotional release and a sense of lightness, clearer thinking and a calmer, more focused mind, and a feeling of being grounded, restored, and reconnected to yourself. You do not have to arrive with a goal. Whatever you bring, the sound tends to meet it."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Why Himalayan singing bowls specifically? What are your bowls made of?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "My bowls are hand-hammered in Nepal from bronze, an alloy of copper and tin, using metalworking techniques passed down through generations. Because each one is shaped by hand, no two are identical, and every bowl produces a complex, layered tone you can feel in the body, not just hear. Unlike crystal bowls, which tend to ring with a single clear tone, Himalayan bowls carry rich overtones that move and shift as the bowl is played. Together, those layered tones and textures create an immersive soundscape that surrounds you completely. That depth is what makes them so effective for somatic work. The vibrations penetrate deeply, and when bowls are played around or over the body, you feel the sound as much as hear it. Every bowl in my collection has been chosen by hand for its tone and character."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do I need any experience to attend?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "None at all. Sound baths are open to all levels, whether you are a seasoned meditator, exploring a new path to relaxation, or simply seeking stress relief. Just show up, lie down, and let the sound meet you where you are."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What happens during a sound bath?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A group sound bath is a journey through sound with over 40 handcrafted Himalayan singing bowls. You will arrive, settle in, and find a comfortable spot lying down. Once everyone is settled, the room quiets and the session begins. This is more than a sound bath. It weaves sound bath and sound healing into one immersive, somatic journey. There is nothing for you to do, just rest and let the sound carry you."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What do people come to sound healing for?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Every person arrives with something different. Some come seeking relief from anxiety, depression, or chronic pain. Others are working through addiction recovery, grief, or burnout. Many come for grounding, energetic balance, or simply to reset. And plenty come just to relax and support their overall wellness. You don't need a reason. Curiosity is enough."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is sound healing a replacement for traditional therapy?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. It's a complementary practice. It works alongside other forms of care, not instead of them."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How often should I receive sound healing?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "There is no rule, but most people find the effect deepens with regular sessions. Once a month is a steady rhythm for relaxation, grounding, and overall well-being. People often come weekly or bi-weekly when they are working with something more specific, such as reducing stress, anxiety, or low mood, improving sleep and calming a restless mind, easing chronic pain and physical tension, emotional release and processing, or restoring energetic and chakra balance. Trust your body. It will tell you when it is time to return."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can you customize a session for a business, group, or wellness program?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Custom sound healing sessions are available for corporate wellness, healthcare settings, schools, fitness and recovery programs, senior wellness, and retreats. Reach out at somaticsoundsvst@gmail.com to talk about what you are envisioning."
+        }
+      }
+    ]
+  }
+  </script>
+
+  <!-- FAQ -->
+  <section class="bg-white" id="faq">
+    <div class="container">
+      <div class="section-header center fade-up" style="max-width:640px; margin:0 auto;">
+        <span class="section-label">Questions</span>
+        <h2>Frequently asked</h2>
+        <div class="divider center"></div>
+        <p>Everything people usually wonder before their first session — and a few things worth knowing once you've been a few times.</p>
+      </div>
+
+      <div class="fade-up" style="max-width:800px; margin:3rem auto 0;">
+
+        <!-- GROUP 1: Understanding sound healing -->
+        <div class="faq-group open">
+          <button class="faq-group-label" onclick="toggleFaqGroup(this)" aria-expanded="true">
+            Understanding sound healing
+            <span class="faq-group-toggle" aria-hidden="true"></span>
+          </button>
+          <div class="faq-group-body">
+
+          <div class="faq-item">
+            <button class="faq-question" onclick="toggleFaq(this)" aria-expanded="false">
+              What is sound healing?
+              <span class="faq-toggle" aria-hidden="true"></span>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                <p>Sound healing is a practice that uses intentional sound and vibration to support your physical, emotional, and spiritual well-being. It begins from a simple idea: the body has a natural rhythm, and the pace of daily life — stress, tension, depletion — can pull it out of tune. Sound healing offers a way back. In a session, you simply lie down and let the tones of Himalayan singing bowls move through you. There's nothing to do, nothing to figure out.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" onclick="toggleFaq(this)" aria-expanded="false">
+              What are the benefits of sound healing?
+              <span class="faq-toggle" aria-hidden="true"></span>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                <p>People come to sound healing for many different reasons, and its benefits are felt across body, mind, and spirit. Most often, people notice:</p>
+                <ul>
+                  <li>Deep relaxation and relief from stress, anxiety, or low mood</li>
+                  <li>Better, more restful sleep</li>
+                  <li>Easing of physical pain and tension held in the body</li>
+                  <li>Emotional release and a sense of lightness</li>
+                  <li>Clearer thinking and a calmer, more focused mind</li>
+                  <li>A feeling of being grounded, restored, and reconnected to yourself</li>
+                </ul>
+                <p>You don't have to arrive with a goal. Whatever you bring, the sound tends to meet it.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" onclick="toggleFaq(this)" aria-expanded="false">
+              Why Himalayan singing bowls specifically? What are your bowls made of?
+              <span class="faq-toggle" aria-hidden="true"></span>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                <p>My bowls are hand-hammered in Nepal from bronze — an alloy of copper and tin — using metalworking techniques passed down through generations. Because each one is shaped by hand, no two are identical, and every bowl produces a complex, layered tone you can feel in the body, not just hear. Unlike crystal bowls, which tend to ring with a single clear tone, Himalayan bowls carry rich overtones that move and shift as the bowl is played. Together, those layered tones and textures create an immersive soundscape that surrounds you completely.</p>
+                <p>That depth is what makes them so effective for somatic work. The vibrations penetrate deeply, and when bowls are played around or over the body, you feel the sound as much as hear it. Every bowl in my collection has been chosen by hand for its tone and character.</p>
+              </div>
+            </div>
+          </div>
+          </div>
+        </div>
+
+        <!-- GROUP 2: Your first session -->
+        <div class="faq-group">
+          <button class="faq-group-label" onclick="toggleFaqGroup(this)" aria-expanded="false">
+            Your first session
+            <span class="faq-group-toggle" aria-hidden="true"></span>
+          </button>
+          <div class="faq-group-body">
+
+          <div class="faq-item">
+            <button class="faq-question" onclick="toggleFaq(this)" aria-expanded="false">
+              Do I need any experience to attend?
+              <span class="faq-toggle" aria-hidden="true"></span>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                <p>None at all. Sound baths are open to all levels — whether you're a seasoned meditator, exploring a new path to relaxation, or simply seeking stress relief. Just show up, lie down, and let the sound meet you where you are.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" onclick="toggleFaq(this)" aria-expanded="false">
+              What happens during a sound bath?
+              <span class="faq-toggle" aria-hidden="true"></span>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                <p>A group sound bath is a journey through sound with over 40 handcrafted Himalayan singing bowls. You'll arrive, settle in, and find a comfortable spot lying down. Once everyone is settled, the room quiets and the session begins.
+This is more than a sound bath — it weaves sound bath and sound healing into one immersive, somatic journey. There's nothing for you to do: just rest and let the sound carry you.</p>
+              </div>
+            </div>
+          </div>
+
+          </div>
+        </div>
+
+        <!-- GROUP 3: Going deeper -->
+        <div class="faq-group">
+          <button class="faq-group-label" onclick="toggleFaqGroup(this)" aria-expanded="false">
+            Going deeper
+            <span class="faq-group-toggle" aria-hidden="true"></span>
+          </button>
+          <div class="faq-group-body">
+
+          <div class="faq-item">
+            <button class="faq-question" onclick="toggleFaq(this)" aria-expanded="false">
+              What do people come to sound healing for?
+              <span class="faq-toggle" aria-hidden="true"></span>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                <p>Every person arrives with something different. Some come seeking relief from anxiety, depression, or chronic pain. Others are working through addiction recovery, grief, or burnout. Many come for grounding, energetic balance, or simply to reset. And plenty come just to relax and support their overall wellness.</p>
+                <p>You don't need a reason. Curiosity is enough.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" onclick="toggleFaq(this)" aria-expanded="false">
+              Is sound healing a replacement for traditional therapy?
+              <span class="faq-toggle" aria-hidden="true"></span>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                <p>No. It's a complementary practice. It works alongside other forms of care, not instead of them.</p>
+                </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" onclick="toggleFaq(this)" aria-expanded="false">
+              How often should I receive sound healing?
+              <span class="faq-toggle" aria-hidden="true"></span>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                <p>There's no rule — but most people find the effect deepens with regular sessions. Once a month is a steady rhythm for relaxation, grounding, and overall well-being.</p>
+                <p>People often come weekly or bi-weekly when they're working with something more specific, such as:</p>
+                <ul>
+                  <li>Reducing stress, anxiety, or low mood</li>
+                  <li>Improving sleep and calming a restless mind</li>
+                  <li>Easing chronic pain and physical tension</li>
+                  <li>Emotional release and processing</li>
+                  <li>Restoring energetic and chakra balance</li>
+                </ul>
+                <p>Trust your body. It will tell you when it's time to return.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" onclick="toggleFaq(this)" aria-expanded="false">
+              Can you customize a session for a business, group, or wellness program?
+              <span class="faq-toggle" aria-hidden="true"></span>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                <p>Yes. Custom sound healing sessions are available for corporate wellness, healthcare settings, schools, fitness and recovery programs, senior wellness, and retreats.</p>
+                <p>Reach out at <a href="mailto:somaticsoundsvst@gmail.com">somaticsoundsvst@gmail.com</a> to talk about what you're envisioning.</p>
+              </div>
+            </div>
+          </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="center fade-up" style="margin-top:3rem;">
+        <p class="small muted">Still have questions? Email <a href="mailto:somaticsoundsvst@gmail.com" style="color:var(--bark)">somaticsoundsvst@gmail.com</a></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SCHOLARSHIP PROGRAM -->
+  <section class="bg-white">
+    <div class="container">
+      <div class="section-header center fade-up" style="max-width:680px; margin:0 auto;">
+        <span class="section-label">Access</span>
+        <h2>Scholarship Program</h2>
+        <div class="divider center"></div>
+        <p>If you're navigating a chronic condition or disability and cost is a barrier, or if you're living with Parkinson's, dementia, autism, or chronic illness, and that's you or someone you love, please reach out.</p>
+        <div class="gap-actions mt-3" style="justify-content:center">
+          <a href="mailto:somaticsoundsvst@gmail.com?subject=Scholarship%20Inquiry" class="btn btn-primary">Get in Touch</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRIVATE BOOKING CTA -->
+  <section class="band">
+    <div class="container center fade-up">
+      <span class="section-label" style="color:var(--stone)">Private Sessions</span>
+      <h2>Want something more personal?</h2>
+      <div class="divider center" style="background:var(--stone)"></div>
+      <p style="color:var(--sand-dark); margin: 0 auto 2.5rem;">Private sound healing or VST session. Reach out.</p>
+      <div class="gap-actions" style="justify-content:center">
+        <a href="mailto:somaticsoundsvst@gmail.com" class="btn btn-light">Inquire About Private Sessions</a>
+        <a href="offerings.html" class="btn btn-outline" style="color:var(--sand); border-color:var(--stone)">See All Offerings</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+				<div class="footer-brand">
+				  <a href="index.html" class="nav-logo">Somatic <span>Sounds</span></a>
+				  <p>Sound healing in Asheville, NC. Blending ancient wisdom with modern well-being through Himalayan singing bowls.</p>
+				  <div class="social-links">
+					<a href="https://www.instagram.com/somatic_sounds_vst/" aria-label="Instagram" target="_blank" rel="noopener">
+					  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+						<rect x="3" y="3" width="18" height="18" rx="5" ry="5"/>
+						<path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+						<line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+					  </svg>
+					</a>
+					<a href="https://www.facebook.com/profile.php?id=61555731204932&sk=about" aria-label="Facebook" target="_blank" rel="noopener">
+					  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+						<path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+					  </svg>
+					</a>
+					<a href="https://www.threads.net/@somatic_sounds_vst" aria-label="Threads" target="_blank" rel="noopener">
+					  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+						<path d="M12.186 24h-.007c-3.581-.024-6.334-1.205-8.184-3.509C2.35 18.44 1.5 15.586 1.472 12.01v-.017c.03-3.579.879-6.43 2.525-8.482C5.845 1.205 8.6.024 12.18 0h.014c2.746.02 5.043.725 6.826 2.098 1.677 1.29 2.858 3.13 3.509 5.467l-2.04.569c-1.104-3.96-3.898-5.984-8.304-6.015-2.91.022-5.11.936-6.54 2.717C4.307 6.504 3.616 8.914 3.589 12c.027 3.086.718 5.496 2.057 7.164 1.43 1.78 3.631 2.695 6.54 2.717 2.623-.02 4.358-.631 5.8-2.045 1.647-1.613 1.618-3.593 1.09-4.798-.31-.71-.873-1.3-1.634-1.75-.192 1.352-.622 2.446-1.284 3.272-.886 1.102-2.14 1.704-3.73 1.79-1.202.065-2.361-.218-3.259-.801-1.063-.689-1.685-1.74-1.752-2.964-.065-1.19.408-2.285 1.33-3.082.88-.76 2.119-1.207 3.583-1.291a13.853 13.853 0 0 1 3.02.142c-.126-.742-.375-1.332-.75-1.757-.513-.586-1.308-.883-2.359-.89h-.029c-.844 0-1.992.232-2.721 1.32L7.734 7.847c.98-1.454 2.568-2.256 4.478-2.256h.044c3.194.02 5.097 1.975 5.287 5.388.108.046.216.094.321.142 1.49.7 2.58 1.761 3.154 3.07.797 1.82.871 4.79-1.548 7.158-1.85 1.81-4.094 2.628-7.277 2.65Zm1.003-11.69c-.242 0-.487.007-.739.021-1.836.103-2.98.946-2.916 2.143.067 1.256 1.452 1.839 2.784 1.767 1.224-.065 2.818-.543 3.086-3.71a10.5 10.5 0 0 0-2.215-.221z"/>
+					  </svg>
+					</a>
+					<a href="https://maps.app.goo.gl/hyhvpstZaKZkkean6" aria-label="Google" target="_blank" rel="noopener">
+					  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+						<path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
+						<path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.99.66-2.26 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
+						<path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/>
+						<path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/>
+					  </svg>
+					</a>
+					<a href="mailto:somaticsoundsvst@gmail.com" aria-label="Email">
+					  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+						<path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+						<polyline points="22,6 12,13 2,6"/>
+					  </svg>
+					</a>
+				  </div>
+				</div>
+        <div class="footer-col">
+          <h4>Offerings</h4>
+          <ul>
+            <li><a href="events.html">Group Sound Baths</a></li>
+            <li><a href="offerings.html">Vibrational Therapy</a></li>
+            <li><a href="offerings.html">Private Sessions</a></li>
+            <li><a href="offerings.html">Corporate & Events</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Learn</h4>
+          <ul>
+            <li><a href="training.html">Training Certification</a></li>
+            <li><a href="about.html">About Vivek</a></li>
+            <li><a href="shop.html">Singing Bowls</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Connect</h4>
+          <ul>
+            <li><a href="events.html">Book a Session</a></li>
+            <li><a href="events.html#faq">FAQ</a></li>
+            <li><a href="mailto:somaticsoundsvst@gmail.com">Email Us</a></li>
+            <li><a href="https://maps.app.goo.gl/hyhvpstZaKZkkean6">Call</a></li>
+            <li><a href="energy.html">Energy</a></li>
+            <li><a href="liability.html">Waiver & Terms</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 Somatic Sounds</span>
+        <span>Sound with Intention and Purpose</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+  <script>
+    function showAllReviews() {
+      document.querySelectorAll('.hidden-review').forEach(el => {
+        el.classList.add('revealed');
+        el.style.display = 'flex';
+      });
+      document.getElementById('show-more-btn').style.display = 'none';
+    }
+
+    function toggleFaq(btn) {
+      const item = btn.parentElement;
+      const isOpen = item.classList.toggle('open');
+      btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    }
+
+    function toggleFaqGroup(btn) {
+      const group = btn.parentElement;
+      const isOpen = group.classList.toggle('open');
+      btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    }
+  </script>
+</body>
+</html>
