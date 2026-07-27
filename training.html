@@ -74,6 +74,60 @@
     .curriculum-text h4 { margin-bottom: 0.3rem; font-size: 1rem; }
     .curriculum-text p { font-size: 0.9rem; max-width: none; }
 
+    /* featured module */
+    .curriculum-item.featured {
+      background: var(--white);
+      border: 1px solid var(--sand-dark);
+      border-left: 3px solid var(--stone-dark);
+      border-radius: var(--radius-md);
+      padding: 1.5rem;
+      margin: 0.5rem 0;
+    }
+    .curriculum-item.featured + .curriculum-item { border-top: none; }
+    .curriculum-tag {
+      display: block;
+      font-size: 0.68rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--stone-dark);
+      margin-bottom: 0.4rem;
+    }
+
+    .price-block {
+      border-top: 1px solid var(--sand-dark);
+      border-bottom: 1px solid var(--sand-dark);
+      padding: 1.25rem 0;
+      margin: 2rem 0 1.5rem;
+    }
+    .price-row {
+      display: flex;
+      align-items: baseline;
+      gap: 0.85rem;
+      flex-wrap: wrap;
+    }
+    .price-now {
+      font-family: var(--font-serif);
+      font-size: 1.6rem;
+      line-height: 1;
+      color: var(--bark);
+    }
+    .price-was {
+      font-size: 1.1rem;
+      color: var(--stone-dark);
+      text-decoration: line-through;
+    }
+    .price-label {
+      font-size: 0.7rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--stone-dark);
+    }
+    .price-note {
+      font-size: 0.88rem;
+      color: var(--stone-dark);
+      margin-top: 0.6rem;
+    }
+
     .coming-badge {
       display: inline-block;
       background: var(--sand-dark);
@@ -123,8 +177,15 @@
           <p>This three-day hybrid, online / in-person one on one training is designed to give you the knowledge, confidence, and hands-on experience to begin your journey as a sound healing practitioner.</p>
           <p class="mt-2">Whether you're completely new to sound healing or looking to deepen your practice, this certification course will guide you into the art and science of working with Himalayan singing bowls — with clarity, confidence, and purpose.</p>
           <p class="mt-2">You'll leave with a certification, practical skills, ongoing support, and — optionally — a personally selected set of high-quality Himalayan singing bowls for your practice.</p>
-          <p class="mt-2">AUG 28th - 30th 2026 - One spot available</p>
-          <div class="gap-actions mt-3">
+          <div class="price-block">
+            <span class="price-label">Introductory rate</span>
+            <div class="price-row">
+              <span class="price-now">$899</span>
+              <span class="price-was">$1,299</span>
+            </div>
+            <p class="price-note">AUG 28th to 30th, 2026. One spot available at this rate.</p>
+          </div>
+          <div class="gap-actions">
             
             <a href="mailto:somaticsoundsvst@gmail.com?subject=Sound Healing Training" class="btn btn-outline">Express Interest</a>
             
@@ -144,7 +205,7 @@
         <span class="section-label">Curriculum</span>
         <h2>What you'll explore</h2>
         <div class="divider"></div>
-        <p>A comprehensive, layered journey — from the science to the sacred.</p>
+        <p>From the science to the sacred, with hands on practice.</p>
       </div>
 
       <div class="grid-2" style="gap: 4rem; align-items:start;">
@@ -152,73 +213,81 @@
           <div class="curriculum-item">
             <div class="curriculum-num">1</div>
             <div class="curriculum-text">
-              <h4>What is Sound Healing & Its Benefits</h4>
-              <p>Understanding how sound impacts the mind, body, and spirit — the foundations of why this works.</p>
+              <h4>Foundations of Sound Healing</h4>
+              <p>What sound healing is, what people come to it seeking, and where it sits alongside other wellness and therapeutic practices.</p>
             </div>
           </div>
           <div class="curriculum-item">
             <div class="curriculum-num">2</div>
             <div class="curriculum-text">
-              <h4>History of Singing Bowls</h4>
-              <p>Tracing the roots of these sacred instruments and their traditional uses across cultures and centuries.</p>
+              <h4>History of the Bowls</h4>
+              <p>Where these instruments come from, how they have been used across cultures and centuries, and the lineage you are stepping into.</p>
             </div>
           </div>
           <div class="curriculum-item">
             <div class="curriculum-num">3</div>
             <div class="curriculum-text">
-              <h4>Singing Bowls — Types, Mallets & Care</h4>
-              <p>Learn to identify different types of bowls, choose the right mallets, and care for your instruments.</p>
+              <h4>Bowls, Mallets, and Care</h4>
+              <p>Identifying bowls by shape, tone, and make. Choosing the right mallets, and keeping your instruments in good voice.</p>
             </div>
           </div>
           <div class="curriculum-item">
             <div class="curriculum-num">4</div>
             <div class="curriculum-text">
               <h4>The Science of Sound</h4>
-              <p>An introduction to vibration, frequency, resonance, and why sound works as a healing modality.</p>
+              <p>Vibration, frequency, resonance, and entrainment. How sound moves through the body, and what settles in the nervous system when it does.</p>
             </div>
           </div>
           <div class="curriculum-item">
             <div class="curriculum-num">5</div>
             <div class="curriculum-text">
-              <h4>Chakras & Mantras</h4>
-              <p>Exploring the energetic body and how sound connects with the chakra system and Vedic traditions.</p>
+              <h4>Chakras and Mantras</h4>
+              <p>The energetic body, the chakra system, and the Vedic roots of working with voice and tone as practice.</p>
+            </div>
+          </div>
+          <div class="curriculum-item">
+            <div class="curriculum-num">6</div>
+            <div class="curriculum-text">
+              <h4>Playing the Bowls</h4>
+              <p>Hands on time with technique. Rim play, striking, layering tones, and learning to listen while you play.</p>
             </div>
           </div>
         </div>
         <div class="fade-up" style="animation-delay:0.1s">
-          <div class="curriculum-item">
-            <div class="curriculum-num">6</div>
-            <div class="curriculum-text">
-              <h4>Playing Singing Bowls</h4>
-              <p>Hands-on training in foundational playing techniques — rim play, striking, and tonal layering.</p>
-            </div>
-          </div>
-          <div class="curriculum-item">
+          <div class="curriculum-item featured">
             <div class="curriculum-num">7</div>
             <div class="curriculum-text">
+              <span class="curriculum-tag">The heart of the training</span>
               <h4>Vibrational Sound Therapy (VST)</h4>
-              <p>Hands-on training for one-on-one sessions. Learn to place bowls around and directly on the body, drawing from the Somatic Resonance System alongside Himalayan and Vedic techniques.</p>
+              <p>One on one work, and the deepest part of this course. You'll learn to place bowls around and directly on the body, drawing from the Somatic Resonance System alongside Himalayan and Vedic technique.</p>
             </div>
           </div>
           <div class="curriculum-item">
             <div class="curriculum-num">8</div>
             <div class="curriculum-text">
               <h4>Introduction to Gongs</h4>
-              <p>Discover different types of gongs and learn basic gong-playing techniques.</p>
+              <p>Gong types, basic technique, and how to bring a gong into a session without overwhelming the room.</p>
             </div>
           </div>
           <div class="curriculum-item">
             <div class="curriculum-num">9</div>
             <div class="curriculum-text">
               <h4>Facilitating a Sound Bath</h4>
-              <p>Guidance on how to structure, open, and close sound sessions for groups of any size.</p>
+              <p>Structuring a session from open to close. Holding the room, reading the group, pacing, and knowing when to speak and when to stay quiet.</p>
             </div>
           </div>
           <div class="curriculum-item">
             <div class="curriculum-num">10</div>
             <div class="curriculum-text">
-              <h4>Sonic Mastery & Ongoing Support</h4>
-              <p>Deepening your relationship with sound as a tool for transformation — and continued guidance after the course.</p>
+              <h4>Building Your Practice</h4>
+              <p>The practical side. Setting up your space, pricing your work, waivers and insurance, and finding your first clients.</p>
+            </div>
+          </div>
+          <div class="curriculum-item">
+            <div class="curriculum-num">11</div>
+            <div class="curriculum-text">
+              <h4>Sonic Mastery and Ongoing Support</h4>
+              <p>Where the work goes after certification. Continued mentorship, questions as they come up, and support as you find your own voice with sound.</p>
             </div>
           </div>
         </div>
