@@ -1,0 +1,10 @@
+# Cloudflare Pages response headers
+
+# Self-hosted fonts: immutable, cache for a year.
+/assets/fonts/*
+  Cache-Control: public, max-age=31536000, immutable
+  Access-Control-Allow-Origin: *
+
+# Images change rarely — a month is safe.
+/assets/images/*
+  Cache-Control: public, max-age=2592000
