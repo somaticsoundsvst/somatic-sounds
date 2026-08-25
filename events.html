@@ -167,6 +167,7 @@
       display: flex;
       flex-direction: column;
       gap: 1rem;
+      overflow: hidden;
       transition: box-shadow var(--transition);
     }
     .review-card:hover { box-shadow: 0 6px 24px rgba(58,46,34,.08); }
@@ -183,11 +184,79 @@
       font-style: italic;
       color: var(--bark);
       line-height: 1.65;
-      flex: 1;
+      /* Clamp long reviews so one 290-word testimonial can't stretch its whole
+         grid row. Change --review-lines below to show more or fewer lines; the
+         cut always lands on a clean line boundary. JS adds "Read more" to any
+         card that overflows. */
+      --review-lines: 12;
+      max-height: calc(var(--review-lines) * 1.65em);
+      overflow: hidden;
     }
+    .review-card.expanded .review-text { max-height: none; overflow: visible; }
 
-    .review-text::before { content: '\201C'; }
-    .review-text::after  { content: '\201D'; }
+    /* Multi-paragraph reviews: one full line between paragraphs keeps the
+       clamp landing on a clean line boundary. */
+    .review-text > p { margin: 0 0 1.65em; }
+    .review-text > p:last-child { margin-bottom: 0; }
+
+    .review-more {
+      /* sits directly under its own text — not pushed to the card floor, so the
+         fade stays over the clipped line when a neighbouring card expands */
+      position: relative;
+      align-self: flex-start;
+      display: inline-flex;
+      align-items: center;
+      background: none;
+      border: none;
+      padding: 0;
+      cursor: pointer;
+      font-family: inherit;
+      font-size: 0.78rem;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--bark);
+      transition: color var(--transition);
+    }
+    .review-more-label {
+      border-bottom: 1px solid var(--stone);
+      padding-bottom: 2px;
+      transition: border-color var(--transition);
+    }
+    /* chevron, echoing the +/- line work on the FAQ toggles */
+    .review-more::after {
+      content: '';
+      width: 0.42em;
+      height: 0.42em;
+      margin-left: 0.65em;
+      border-right: 1.5px solid currentColor;
+      border-bottom: 1.5px solid currentColor;
+      transform: translateY(-0.18em) rotate(45deg);
+      transition: transform var(--transition);
+    }
+    .review-card.expanded .review-more::after {
+      transform: translateY(0.1em) rotate(-135deg);
+    }
+    .review-more:hover { color: var(--stone-dark); }
+    .review-more:hover .review-more-label { border-color: var(--stone-dark); }
+    /* soft fade over the clamped last line, so the cut reads as intentional */
+    .review-more::before {
+      content: '';
+      position: absolute;
+      bottom: 100%;
+      left: 0;
+      width: 100vw;
+      height: 2.4em;
+      pointer-events: none;
+      background: linear-gradient(to bottom, rgba(255,255,255,0), var(--white) 85%);
+    }
+    .review-card.expanded .review-more::before { display: none; }
+    .review-more:focus-visible { outline: 2px solid var(--stone); outline-offset: 3px; }
+
+    p.review-text::before,
+    .review-text > p:first-child::before { content: '\201C'; }
+    p.review-text::after,
+    .review-text > p:last-child::after   { content: '\201D'; }
 
     .review-meta {
       font-size: 0.78rem;
@@ -356,7 +425,12 @@
     .faq-item.open .faq-answer {
       max-height: 1500px;
     }
+  
+    /* staggered reveal for the review grid */
+    .reviews-grid > .review-card:nth-child(3n+2) { transition-delay: .08s; }
+    .reviews-grid > .review-card:nth-child(3n+3) { transition-delay: .16s; }
   </style>
+  <noscript><style>.fade-up{opacity:1 !important;transform:none !important}</style></noscript>
 </head>
 <body class="page-body">
 
@@ -549,19 +623,22 @@
 
       <div class="reviews-grid">
 
-
-
-        <!-- TOP 9 VISIBLE: specific outcomes, first-timers, private, group, visitor, and host perspectives -->
+        <!-- TOP 12 VISIBLE: specific outcomes, first-timers, private, group, visitor, and host perspectives -->
 
         <div class="review-card fade-up">
           <p class="review-text">I have been attending Vivek's sound baths fairly consistently for the last 3 months. These sessions have decreased some of my anxieties significantly. I have also noticed a marked decrease in pain from a very old injury. I would recommend visiting Somatic Sounds to anyone in search of emotional or physical healing.</p>
         </div>
 
-        <div class="review-card fade-up" style="animation-delay:.06s;">
-          <p class="review-text">We absolutely loved our sound bath journey. Our Facilitator, Vivek used about 30 handcrafted singing bowls and lulled both of us into a deep theta brain state. I even fell asleep and felt rejuvenated after, with some of the best sleep that night. What a beautiful hour of symphonic relaxation.</p>
+        <div class="review-card fade-up">
+          <div class="review-text">
+            <p>I never anticipated this reaction to beautiful and resonating sound frequencies. Recently, I had my third session with Vivek. The first two were group sessions, while this last one was a private session with VST. Vivek is an expert in creating amazing sounds and precise timing.</p>
+            <p>Before the session, Vivek thoroughly prepares the person or group, explaining what sounds to expect and understand. Vivek also describes as what each individual might expect mentally/physically from this unusual and intriguing individual sound experience, depending on the type of bowl session chosen.</p>
+            <p>For me, the sound frequencies act as a gateway to meditation. I’ve tried meditation before, but it took many attempts to get into the “zone.” I haven’t done it in a while because it requires more effort to achieve a meditative state. However, the bowl sessions quickly transport me into a unique meditative state each time. They evoke wonderful sensations and feelings, like “traveling” (no joke), extreme color graphics, and visions or conversations that make no sense to me. I absolutely loved it! It left me feeling physically rejuvenated, releasing petty feelings (etc), and recharged my mind, giving me a greater sense of levity. Who would have thought?</p>
+            <p>Everyone’s experience is different, and mine was particularly vivid and tangible. It opened doors in my imagination, causing a sense of time to become distorted. It led me to a grateful and peaceful “living in the moment” feeling that lasted for several days and nights. I highly recommend investing in yourself and exploring what your mind takes you to. Thanks, Vivek!</p>
+          </div>
         </div>
 
-        <div class="review-card fade-up" style="animation-delay:.12s;">
+        <div class="review-card fade-up">
           <p class="review-text">I had the most incredible experience at Somatic Sounds. I went in for a 45-minute to 1-hour sound bath, and I left feeling completely refreshed, grounded, and renewed. The atmosphere was peaceful, and the way the sounds were guided created such a deep sense of relaxation and connection. It's hard to put into words how calming and restorative the experience was. I felt my mind quiet down, my body release tension, and I walked away feeling lighter and more balanced. If you're looking for a unique wellness experience that helps you slow down, reset, and reconnect with yourself, I highly recommend Somatic Sounds. Truly an amazing experience!</p>
         </div>
 
@@ -569,11 +646,11 @@
           <p class="review-text">The Group Sound Healings are wonderful. Vivek skillfully customized his services and bowl placement which facilitated a deeper experience. The vibrations penetrated to my core inducing a profound out of body experience. I emerged feeling like I had a physical upgrade, greater mental clarity, and joyfulness.</p>
         </div>
 
-        <div class="review-card fade-up" style="animation-delay:.06s;">
+        <div class="review-card fade-up">
           <p class="review-text">Had quite a bit of stagnant energy lingering in my legs and hips that was able to be released, and was able to mostly reset a deeply disregulated nervous system after two particularly stressful weeks where meditation had not been an option. Will return as often  as I'm able.</p>
         </div>
 
-        <div class="review-card fade-up" style="animation-delay:.12s;">
+        <div class="review-card fade-up">
           <p class="review-text">It was my first time having a soundbath with Vivek. Very unique and powerful experience — the whole setup is relaxing and enhances the sound session. I reached deep relaxation and dreamlike states that I've only experienced through very different means. Impressive.</p>
         </div>
 
@@ -581,18 +658,29 @@
           <p class="review-text">Vivek's intuitive ability to empower you to help you find what you need within is shown again and again in each session. This is not a passive listening experience. It transcends the moment and takes you exactly where you need to go to find what you need within yourself.</p>
         </div>
 
-        <div class="review-card fade-up" style="animation-delay:.06s;">
+        <div class="review-card fade-up">
           <p class="review-text">We did 2 sound baths with Vivek on our visit to Asheville!  He did a fantastic job of explaining it before hand and great experience during the session.  Would recommend to anyone local or visiting Asheville!  If I lived there— would be a regular! </p>
         </div>
 
-        <div class="review-card fade-up" style="animation-delay:.12s;">
+        <div class="review-card fade-up">
           <p class="review-text">Vivek did an incredible job guiding two groups that I was hosting through his sound bath experience. People walked away refreshed and centered. I am so glad we found him for our event!</p>
+        </div>
+    
+        <div class="review-card fade-up">
+          <p class="review-text">Vivek performed an hour long session. I relaxed and my husband, who has Parkinson's Disease, experienced total relief from tremors for 2–3 hours. That doesn't sound like much but it's amazing that vibrations and sound can have that effect. My husband wants to visit Vivek again!</p>
+        </div>
+        
+        <div class="review-card fade-up">
+          <p class="review-text">I booked a private sound bath for me and my friend and it was an extraordinary experience. Vivek created a custom selection of healing bowls and even played them directly over the body. You can tell he is passionate about what he does and has built a great collection of bowls from all over the world.</p>
+        </div>
+        <div class="review-card fade-up">
+          <p class="review-text">Vivek is professional and such a gentle and compassionate practitioner and person. His bowls, gong, and chimes ripple through my mind, body, spirit gently and moves energy that is stuck. I will definitely be returning more frequently. I highly recommend experiencing sound healings the way he does it.</p>
         </div>
 
         <!-- hidden reviews, revealed by "Show more" -->
 
         <div class="review-card hidden-review">
-          <p class="review-text">Vivek performed an hour long session. I relaxed and my husband, who has Parkinson's Disease, experienced total relief from tremors for 2–3 hours. That doesn't sound like much but it's amazing that vibrations and sound can have that effect. My husband wants to visit Vivek again!</p>
+          <p class="review-text">We absolutely loved our sound bath journey. Our Facilitator, Vivek used about 30 handcrafted singing bowls and lulled both of us into a deep theta brain state. I even fell asleep and felt rejuvenated after, with some of the best sleep that night. What a beautiful hour of symphonic relaxation.</p>
         </div>
 
         <div class="review-card hidden-review">
@@ -608,15 +696,7 @@
         </div>
 
         <div class="review-card hidden-review">
-          <p class="review-text">I booked a private sound bath for me and my friend and it was an extraordinary experience. Vivek created a custom selection of healing bowls and even played them directly over the body. You can tell he is passionate about what he does and has built a great collection of bowls from all over the world.</p>
-        </div>
-
-        <div class="review-card hidden-review">
           <p class="review-text">I have been going regularly to Vivek's sessions since my first one last month. It's a very healing space that allows me to integrate a lot of the work that I've been doing. I'm fortunate to have found him.</p>
-        </div>
-
-        <div class="review-card hidden-review">
-          <p class="review-text">Vivek is professional and such a gentle and compassionate practitioner and person. His bowls, gong, and chimes ripple through my mind, body, spirit gently and moves energy that is stuck. I will definitely be returning more frequently. I highly recommend experiencing sound healings the way he does it.</p>
         </div>
 
         <div class="review-card hidden-review">
@@ -1090,12 +1170,80 @@ This is more than a sound bath — it weaves sound bath and sound healing into o
 
   <script src="assets/js/main.js"></script>
   <script>
+    /* Safety net for the .fade-up reveal.
+       main.js uses an IntersectionObserver, which only fires for elements that are
+       actually on screen at some point. Landing on an anchor (events.html#testimonials),
+       jumping to the bottom, or scrolling fast skips elements entirely, and they stay
+       at opacity:0 forever. This sweep reveals anything in view and re-checks on scroll,
+       and works even if main.js fails to load. */
+    (function () {
+      var pending = [].slice.call(document.querySelectorAll('.fade-up'));
+      function sweep() {
+        pending = pending.filter(function (el) {
+          var r = el.getBoundingClientRect();
+          if (r.top < window.innerHeight && r.bottom > 0) { el.classList.add('visible'); return false; }
+          return true;
+        });
+        if (!pending.length) {
+          window.removeEventListener('scroll', sweep);
+          window.removeEventListener('resize', sweep);
+        }
+      }
+      window.addEventListener('scroll', sweep, { passive: true });
+      window.addEventListener('resize', sweep);
+      window.addEventListener('load', sweep);
+      sweep();
+      setTimeout(sweep, 400);
+    })();
+
+    /* "Read more" toggles, added only to cards whose text actually overflows the
+       clamp. Re-evaluated on resize, after webfonts load, and after the hidden
+       reviews are revealed, since all three change where the text wraps. */
+    function refreshReadMore() {
+      document.querySelectorAll('.reviews-grid > .review-card').forEach(function (card) {
+        if (window.getComputedStyle(card).display === 'none') return;
+        var text = card.querySelector('.review-text');
+        if (!text) return;
+        var btn = card.querySelector('.review-more');
+        var overflows = card.classList.contains('expanded') ||
+                        (text.scrollHeight - text.clientHeight) > 4;
+        if (overflows && !btn) {
+          btn = document.createElement('button');
+          btn.type = 'button';
+          btn.className = 'review-more';
+          btn.setAttribute('aria-expanded', 'false');
+          var label = document.createElement('span');
+          label.className = 'review-more-label';
+          label.textContent = 'Read more';
+          btn.appendChild(label);
+          btn.addEventListener('click', function () {
+            var open = card.classList.toggle('expanded');
+            label.textContent = open ? 'Read less' : 'Read more';
+            btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+          });
+          card.appendChild(btn);
+        } else if (!overflows && btn) {
+          btn.remove();
+        }
+      });
+    }
+
+    var readMoreTimer;
+    window.addEventListener('resize', function () {
+      clearTimeout(readMoreTimer);
+      readMoreTimer = setTimeout(refreshReadMore, 150);
+    });
+    window.addEventListener('load', refreshReadMore);
+    if (document.fonts && document.fonts.ready) document.fonts.ready.then(refreshReadMore);
+    refreshReadMore();
+
     function showAllReviews() {
       document.querySelectorAll('.hidden-review').forEach(el => {
-        el.classList.add('revealed');
+        el.classList.add('revealed', 'visible');
         el.style.display = 'flex';
       });
       document.getElementById('show-more-btn').style.display = 'none';
+      refreshReadMore();
     }
 
     function toggleFaq(btn) {
