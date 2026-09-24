@@ -398,7 +398,7 @@ section { padding: var(--section-gap) 0; }
 }
 
 /* ---- PAGE TOP OFFSET ---- */
-.page-body { padding-top: 72px; }
+.page-body { padding-top: 5rem; }
 
 /* ---- HERO ---- */
 .hero {
