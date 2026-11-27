@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Events & Booking | Somatic Sounds</title>
-  <meta name="description" content="Book a sound bath in Asheville, NC. Group sessions Saturday at 11am & 3pm, Sunday at 11am & 6pm with Himalayan singing bowls. Just 7 spots per session." />
+  <meta name="description" content="Book a sound bath in Fort Lauderdale, FL. Group sessions Saturday at 11am & 6pm, plus Miami and West Palm Beach pop-ups through the week." />
   <link rel="canonical" href="https://somaticsounds.net/events.html" />
 
 <!-- Favicon -->
@@ -18,7 +18,7 @@
 
   <!-- Open Graph -->
   <meta property="og:title" content="Events & Booking | Somatic Sounds" />
-  <meta property="og:description" content="Book a sound bath session with Himalayan singing bowls in Asheville, NC. Saturday at 11am & 3pm, Sunday at 11am & 6pm. 7 people max." />
+  <meta property="og:description" content="Book a sound bath in Fort Lauderdale, FL. Group sessions Saturday at 11am & 6pm, plus Miami and West Palm Beach pop-ups through the week." />
   <meta property="og:url" content="https://somaticsounds.net/events.html" />
   <meta property="og:image" content="https://somaticsounds.net/assets/images/2024/05/09-DSC06064.jpg" />
   <meta property="og:type" content="website" />
@@ -27,7 +27,7 @@
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Events & Booking | Somatic Sounds" />
-  <meta name="twitter:description" content="Book a sound bath session with Somatic Sounds in Asheville, NC. Saturday at 11am & 3pm, Sunday at 11am & 6pm. 7 people max." />
+  <meta name="twitter:description" content="Book a sound bath in Fort Lauderdale, FL. Group sessions Saturday at 11am & 6pm, plus Miami and West Palm Beach pop-ups through the week." />
   <meta name="twitter:image" content="https://somaticsounds.net/assets/images/2024/05/09-DSC06064.jpg" />
   <!-- Schema.org: Local Business -->
   <script type="application/ld+json">
@@ -38,14 +38,20 @@
     "name": "Somatic Sounds",
     "url": "https://somaticsounds.net",
     "image": "https://somaticsounds.net/assets/images/2024/04/1-22-IMG_5878-scaled.jpg",
-    "description": "Vibrational sound healing in Asheville, NC. Group sound bath meditations and private sessions using Himalayan singing bowls.",
+    "description": "Vibrational sound healing in Fort Lauderdale and South Florida. Group sound bath meditations and private sessions using Himalayan singing bowls.",
     "founder": { "@type": "Person", "name": "Vivek Chugh" },
     "address": {
       "@type": "PostalAddress",
-      "addressLocality": "Asheville",
-      "addressRegion": "NC",
+      "addressLocality": "Fort Lauderdale",
+      "addressRegion": "FL",
       "addressCountry": "US"
     },
+    "areaServed": [
+      { "@type": "City", "name": "Fort Lauderdale" },
+      { "@type": "City", "name": "Miami" },
+      { "@type": "City", "name": "West Palm Beach" }
+    ],
+    "telephone": "+1-828-505-6976",
     "email": "somaticsoundsvst@gmail.com",
     "priceRange": "$$",
     "sameAs": [
@@ -69,7 +75,7 @@
       background: var(--sand);
       border: 1px solid var(--sand-dark);
       border-radius: var(--radius-lg);
-      padding: 2.5rem;
+      padding: 1.75rem 2.5rem 1.5rem;
       text-align: center;
     }
     .booking-cta h3 { margin-bottom: 0.75rem; }
@@ -127,6 +133,137 @@
       display: block;
       line-height: 1;
       margin-bottom: 0.25rem;
+    }
+
+    /* ===== Dated schedule list (edited weekly) ===== */
+    .schedule-section {
+      margin-top: 2rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--sand-dark);
+    }
+    .schedule-heading {
+      font-family: var(--font-serif);
+      font-size: 1.9rem;
+      color: var(--bark);
+      margin-bottom: 0.4rem;
+    }
+    .schedule-sub {
+      font-size: 0.82rem;
+      color: var(--stone-dark);
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      margin-bottom: 2rem;
+    }
+    .schedule-list {
+      display: flex;
+      flex-direction: column;
+    }
+    .session {
+      display: grid;
+      grid-template-columns: 100px 1fr auto;
+      gap: 2rem;
+      padding: 1.75rem 0;
+      border-bottom: 1px solid var(--sand-dark);
+      align-items: center;
+    }
+    .session:last-child { border-bottom: none; }
+    .session-cal {
+      text-align: center;
+      padding: 0.75rem 0.5rem 0.65rem;
+      background: var(--sand);
+      border-radius: var(--radius-md);
+    }
+    .session-cal .cal-day {
+      font-family: var(--font-serif);
+      font-size: 2.4rem;
+      color: var(--bark);
+      display: block;
+      line-height: 1;
+    }
+    .session-cal .cal-month {
+      font-size: 0.75rem;
+      color: var(--stone-dark);
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      margin-top: 0.45rem;
+      display: block;
+    }
+    .session-cal .cal-dow {
+      font-size: 0.75rem;
+      color: var(--stone-dark);
+      margin-top: 0.2rem;
+      display: block;
+      letter-spacing: 0.08em;
+    }
+    .session-body { min-width: 0; }
+    .session-city {
+      font-size: 0.9rem;
+      color: var(--bark);
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+      display: block;
+    }
+    .session-note {
+      font-family: var(--font-serif);
+      font-style: italic;
+      font-size: 1.15rem;
+      color: var(--stone-dark);
+      line-height: 1.45;
+    }
+    .session-times {
+      display: flex;
+      gap: 0.6rem;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+    .session-time {
+      padding: 0.7rem 1.6rem;
+      background: var(--bark);
+      color: var(--white);
+      border-radius: var(--radius-md);
+      font-size: 1.05rem;
+      font-weight: 500;
+      text-decoration: none;
+      transition: background 0.2s, transform 0.15s;
+    }
+    .session-time:hover { background: var(--stone-dark); transform: translateY(-1px); }
+    @media (max-width: 700px) {
+      .session { grid-template-columns: 80px 1fr; gap: 1.25rem; padding: 1.4rem 0; }
+      .session-times { grid-column: 1 / -1; justify-content: flex-start; margin-top: 0.5rem; }
+      .session-cal .cal-day { font-size: 2rem; }
+    }
+
+    /* Placeholder when the schedule isn't published yet */
+    .schedule-placeholder {
+      text-align: center;
+      padding: 3.5rem 1.5rem 3rem;
+      border-top: 1px solid var(--sand-dark);
+      border-bottom: 1px solid var(--sand-dark);
+    }
+    .schedule-placeholder h4 {
+      font-family: var(--font-serif);
+      font-size: 2rem;
+      color: var(--bark);
+      margin-bottom: 0.6rem;
+      line-height: 1.1;
+    }
+    .placeholder-date {
+      font-size: 0.85rem;
+      color: var(--stone-dark);
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      margin-bottom: 1.25rem;
+    }
+    .placeholder-note {
+      font-family: var(--font-serif);
+      font-style: italic;
+      color: var(--stone-dark);
+      font-size: 1.05rem;
+      max-width: 440px;
+      margin: 0 auto;
+      line-height: 1.5;
     }
 
     .what-to-expect li {
@@ -449,15 +586,11 @@
     </button>
   </nav>
 
-<div style="background:#C8B99A;border-bottom:1px solid #9E856A;padding:0.75rem 1.5rem;text-align:center;">
-  <p style="margin:0 auto;max-width:none;color:#3A2E22;font-size:0.80rem;line-height:1.2;letter-spacing:0.04em;font-weight:500;">Final Asheville group sessions run through Sunday, November 22nd. Private sessions are open by request into early December, before Somatic Sounds relocates.</p>
-</div>
-
   <section class="page-hero">
     <div class="container">
-      <span class="section-label">Asheville, NC</span>
+      <span class="section-label">South Florida</span>
       <h1>Events</h1>
-      <p>Weekly sound healing events.<br>Intimate space setting.</p>
+      <p>Weekly sound healing events.</p>
     </div>
   </section>
 
@@ -466,53 +599,19 @@
     <div class="container">
       <div class="grid-2" style="gap:5rem; align-items:start;">
         <div class="fade-up">
-          <span class="section-label">Every Weekend</span>
           <h2>Sound Healing Meditations</h2>
           <div class="divider"></div>
-          <h4>Private sessions will be available till December 12th. </h4>
-          <h4> Sound Healing $275 upto 6 people.</h4>
-            <h4>VST solo session $125</h4>
-          <br><br><br>
           <p>A somatic journey where ancient wisdom meets modern well-being. Soothing Himalayan tones wash over you — quieting the mind, softening the body, settling the spirit.</p>
           <p>Vivek guides each session with <strong>over 40 handcrafted singing bowls</strong>, layered with <strong>binaural beats</strong> to support deep relaxation and nervous system regulation. It's a multidimensional soundscape — richer and more textured than a traditional sound bath.</p>
           <p>No experience needed. Come as you are — curious, tired, seeking, or just ready for a reset.</p>
-          <div style="margin-top: 2rem;">
-            <p class="small muted mb-1">Session Times</p> <p class="muted" style="margin-top:0.5rem; font-size:0.75rem;">*Check online schedule for any changes.</p>
-
-            <div class="schedule-day">
-              <span class="schedule-day-label">Saturday</span>
-              <div class="schedule-row">
-                <a href="https://somaticsounds.as.me/" target="_blank" rel="noopener" class="schedule-cell">
-                  <span class="time-big">11 am</span>
-                </a>
-                <a href="https://somaticsounds.as.me/" target="_blank" rel="noopener" class="schedule-cell">
-                  <span class="time-big">3 pm</span>
-                </a>
-              </div>
-            </div>
-
-            <div class="schedule-day">
-              <span class="schedule-day-label">Sunday</span>
-              <div class="schedule-row">
-                <a href="https://somaticsounds.as.me/" target="_blank" rel="noopener" class="schedule-cell">
-                  <span class="time-big">11 am</span>
-                </a>
-                <a href="https://somaticsounds.as.me/" target="_blank" rel="noopener" class="schedule-cell">
-                  <span class="time-big">6 pm</span>
-                </a>
-              </div>
-            </div>
-
-            <p class="small muted">Intimate space setting</p>
-          </div>
         </div>
 
         <div class="fade-up" style="animation-delay:0.15s">
           <div class="booking-cta">
             <h3>Reserve your spot</h3>
-            <p>Sessions are booked through Acuity.<br> Select your quantity, preferred date and time — and you're set.</p>
+            <p>Sessions are booked through Acuity.<br> Select your quantity, preferred date, time, and location — and you're set.</p>
             <a href="https://somaticsounds.as.me/schedule/f25d1001" target="_blank" rel="noopener" class="btn btn-primary">Book Online</a>
-            <p style="font-size:0.85rem; margin-top:1.25rem; color:var(--stone-dark); line-height:1.6;">Sessions are non-refundable. Any unused ticket is allocated to our <a href="#scholarship" style="color:var(--bark)">Scholarship Program</a> to support those who need it.</p>
+            <p style="font-size:0.85rem; margin-top:1.25rem; color:var(--stone-dark); line-height:1.6;">Sessions are non-refundable.</p>
             <p style="font-size:0.85rem; margin-top:0.75rem; color:var(--stone-dark)">Questions or an alternate form of payment?<br>Email <a href="mailto:somaticsoundsvst@gmail.com" style="color:var(--bark)">somaticsoundsvst@gmail.com</a></p>
           </div>
 
@@ -521,6 +620,31 @@
           </a>
         </div>
       </div>
+
+      <!-- =============================================
+           SCHEDULE: full-width row below the booking image
+           ============================================= -->
+      <div class="schedule-section fade-up">
+        <h3 class="schedule-heading">Upcoming Sessions</h3>
+
+        <!-- =============================================
+             PLACEHOLDER while the schedule is not yet published.
+             To go live with real dates, replace this
+             <div class="schedule-placeholder"> block with the
+             <div class="schedule-list"> structure from the
+             backup copy of this file.
+             ============================================= -->
+
+        <div class="schedule-placeholder">
+          <h4>Coming Soon</h4>
+          <p class="placeholder-date">January 2027</p>
+          <p class="placeholder-note">Full schedule in the works. Check back shortly.</p>
+        </div>
+        <!-- END PLACEHOLDER -->
+
+        <p class="muted" style="margin-top:1.5rem; font-size:0.78rem;">*Check online Acuity schedule for current times and location.</p>
+      </div>
+
     </div>
   </section>
 
@@ -544,7 +668,7 @@
               <span class="expect-num">2</span>
               <div>
                 <h4>Lie down and let go</h4>
-                <p>You'll spend most of the session lying comfortably on a yoga mat. Blankets and eye cover are provided.<br> ( Chair option available )</p>
+                <p>You'll spend most of the session lying down comfortably.<br> ( Chair option available )</p>
               </div>
             </li>
             <li>
@@ -1077,21 +1201,6 @@ This is more than a sound bath — it weaves sound bath and sound healing into o
     </div>
   </section>
 
-    <!-- SCHOLARSHIP PROGRAM -->
-    <section class="bg-white" id="scholarship">
-      <div class="container">
-        <div class="section-header center fade-up" style="max-width:680px; margin:0 auto;">
-          <span class="section-label">Access</span>
-          <h2>Scholarship Program</h2>
-          <div class="divider center"></div>
-          <p>If you're navigating a chronic condition, disability, or financial hardship, or if you're living with Parkinson's, dementia, autism, or chronic illness, and that's you or someone you love, please reach out.</p>
-          <div class="gap-actions mt-3" style="justify-content:center">
-            <a href="mailto:somaticsoundsvst@gmail.com?subject=Scholarship%20Inquiry" class="btn btn-primary">Reach Out</a>
-          </div>
-        </div>
-      </div>
-    </section>
-
   <!-- PRIVATE BOOKING CTA -->
   <section class="band">
     <div class="container center fade-up">
@@ -1112,7 +1221,7 @@ This is more than a sound bath — it weaves sound bath and sound healing into o
       <div class="footer-grid">
 				<div class="footer-brand">
 				  <a href="index.html" class="nav-logo">Somatic <span>Sounds</span></a>
-				  <p>Sound healing in Asheville, NC. Blending ancient wisdom with modern well-being through Himalayan singing bowls.</p>
+				  <p>Sound healing across South Florida — Fort Lauderdale, Miami, and West Palm Beach. Blending ancient wisdom with modern well-being through Himalayan singing bowls.</p>
 				  <div class="social-links">
 					<a href="https://www.instagram.com/somatic_sounds_vivek/" aria-label="Instagram" target="_blank" rel="noopener">
 					  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
@@ -1178,7 +1287,7 @@ This is more than a sound bath — it weaves sound bath and sound healing into o
         </div>
       </div>
       <div class="footer-bottom">
-        <span>© 2026 Somatic Sounds</span>
+        <span>© 2027 Somatic Sounds</span>
         <span>Sound with Intention and Purpose</span>
       </div>
     </div>
